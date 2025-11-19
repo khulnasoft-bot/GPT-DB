@@ -86,6 +86,9 @@ def _load_modules_from_file(
         try:
             loader = importlib.machinery.SourceFileLoader(mod_name, filepath)
             spec = importlib.util.spec_from_loader(mod_name, loader)
+            if spec is None:
+                logger.error(f"Failed to create module spec for: {filepath}")
+                return []
             new_module = importlib.util.module_from_spec(spec)
             sys.modules[spec.name] = new_module
             loader.exec_module(new_module)

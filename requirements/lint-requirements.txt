@@ -15,3 +15,7 @@ types-Markdown
 types-tqdm
 pandas-stubs
 types-psutil
+types-SQLAlchemy
+types-Jinja2
+types-chardet
+# For fastapi, there's no official 'types-fastapi'. It usually relies on 'fastapi' having its own type hints.

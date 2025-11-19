@@ -284,7 +284,7 @@ class MetricManage:
 
     def __init__(self):
         """Init metricManage."""
-        self.metrics = defaultdict()
+        self.metrics: defaultdict[Any, Any] = defaultdict()
 
     def register_metric(self, cls: Type[EvaluationMetric]):
         """Register metric."""

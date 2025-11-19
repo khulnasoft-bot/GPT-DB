@@ -153,9 +153,14 @@ class BaseOperatorMeta(ABCMeta):
     def __new__(cls, name, bases, namespace, **kwargs):
         """Create a new BaseOperator class with default arguments."""
         new_cls = super().__new__(cls, name, bases, namespace, **kwargs)
-        new_cls.__init__ = cls._apply_defaults(new_cls.__init__)
+        new_cls.__init__ = cls._apply_defaults(new_cls.__init__) # type: ignore
         new_cls.after_define()
         return new_cls
+
+    @classmethod
+    def after_define(cls):
+        """Called after the class is defined."""
+        pass
 
 
 class BaseOperator(DAGNode, ABC, Generic[OUT], metaclass=BaseOperatorMeta):
@@ -193,7 +198,7 @@ class BaseOperator(DAGNode, ABC, Generic[OUT], metaclass=BaseOperatorMeta):
             self.incremental_output = bool(kwargs["incremental_output"])
         if "output_format" in kwargs:
             self.output_format = kwargs["output_format"]
-        self._runner: WorkflowRunner = runner
+        self._runner: WorkflowRunner[OUT] = cast(WorkflowRunner[OUT], runner)
         self._dag_ctx: Optional[DAGContext] = None
         self._can_skip_in_branch = can_skip_in_branch
         self._variables_provider = variables_provider
@@ -212,7 +217,7 @@ class BaseOperator(DAGNode, ABC, Generic[OUT], metaclass=BaseOperatorMeta):
     def __setstate__(self, state):
         """Customize the unpickling process."""
         self.__dict__.update(state)
-        self._runner = default_runner
+        self._runner = default_runner # type: ignore
         self._system_app = DAGVar.get_current_system_app()
         self._executor = DAGVar.get_executor()
 

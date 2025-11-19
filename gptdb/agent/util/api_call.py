@@ -25,7 +25,7 @@ class PluginStatus(BaseModel):
     api_result: Optional[str] = None
     err_msg: Optional[str] = None
     start_time: float = datetime.now().timestamp() * 1000
-    end_time: Optional[str] = None
+    end_time: Optional[float] = None
 
     df: Any = None
 
@@ -157,13 +157,16 @@ class ApiCall:
         for api_index, api_context in api_context_map.items():
             api_context = api_context.replace("\\n", "").replace("\n", "")
             api_call_element = ET.fromstring(api_context)
-            api_name = api_call_element.find("name").text
-            if api_name.find("[") >= 0 or api_name.find("]") >= 0:
+            api_name_element = api_call_element.find("name")
+            api_name = api_name_element.text if api_name_element is not None else ""
+            if api_name and (api_name.find("[") >= 0 or api_name.find("]") >= 0):
                 api_name = api_name.replace("[", "").replace("]", "")
             api_args = {}
             args_elements = api_call_element.find("args")
-            for child_element in args_elements.iter():
-                api_args[child_element.tag] = child_element.text
+            if args_elements is not None:
+                for child_element in args_elements.iter():
+                    if child_element.tag is not None:
+                        api_args[child_element.tag] = child_element.text
 
             api_status = self.plugin_status_map.get(api_context)
             if api_status is None:

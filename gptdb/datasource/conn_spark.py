@@ -105,7 +105,7 @@ class SparkConnector(BaseConnector):
         """Get table show create table about specified table."""
         return "ans"
 
-    def get_fields(self, table_name: str):
+    def get_fields(self, table_name: Optional[str] = None):
         """Get column meta about dataframe.
 
         TODO: Support table_name.
