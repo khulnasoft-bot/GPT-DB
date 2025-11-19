@@ -132,7 +132,7 @@ class ConversationComposerOperator(MapOperator[CommonLLMHttpRequestBody, ModelRe
         keep_end_rounds: Optional[int] = None,
         storage: Optional[StorageInterface[StorageConversation, Any]] = None,
         message_storage: Optional[StorageInterface[MessageStorageItem, Any]] = None,
-        **kwargs
+        **kwargs,
     ):
         """Create a new instance of ConversationComposerOperator."""
         super().__init__(**kwargs)
@@ -171,9 +171,9 @@ class ConversationComposerOperator(MapOperator[CommonLLMHttpRequestBody, ModelRe
             prompt_build_task = PromptFormatDictBuilderOperator(
                 human_message_key=self._human_message_key
             )
-            model_request_build_task: JoinOperator[
-                ModelRequest
-            ] = MergedRequestBuilderOperator()
+            model_request_build_task: JoinOperator[ModelRequest] = (
+                MergedRequestBuilderOperator()
+            )
 
             # Build composer dag
             (

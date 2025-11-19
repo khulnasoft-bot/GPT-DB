@@ -70,9 +70,9 @@ class Config(metaclass=Singleton):
         self.wenxin_model_version = os.getenv("WEN_XIN_MODEL_VERSION")
         if self.wenxin_proxy_api_key and self.wenxin_proxy_api_secret:
             os.environ["wenxin_proxyllm_proxy_api_key"] = self.wenxin_proxy_api_key
-            os.environ[
-                "wenxin_proxyllm_proxy_api_secret"
-            ] = self.wenxin_proxy_api_secret
+            os.environ["wenxin_proxyllm_proxy_api_secret"] = (
+                self.wenxin_proxy_api_secret
+            )
             os.environ["wenxin_proxyllm_proxyllm_backend"] = (
                 self.wenxin_model_version or ""
             )
@@ -81,9 +81,9 @@ class Config(metaclass=Singleton):
         self.spark_proxy_api_password = os.getenv("XUNFEI_SPARK_API_PASSWORD")
         self.spark_proxy_api_model = os.getenv("XUNFEI_SPARK_API_MODEL")
         if self.spark_proxy_api_model and self.spark_proxy_api_password:
-            os.environ[
-                "spark_proxyllm_proxy_api_password"
-            ] = self.spark_proxy_api_password
+            os.environ["spark_proxyllm_proxy_api_password"] = (
+                self.spark_proxy_api_password
+            )
             os.environ["spark_proxyllm_proxy_api_model"] = self.spark_proxy_api_model
 
         # baichuan proxy
@@ -142,9 +142,9 @@ class Config(metaclass=Singleton):
             )
         self.siliconflow_proxy_api_key = os.getenv("SILICONFLOW_API_KEY")
         if self.siliconflow_proxy_api_key:
-            os.environ[
-                "siliconflow_proxyllm_proxy_api_key"
-            ] = self.siliconflow_proxy_api_key
+            os.environ["siliconflow_proxyllm_proxy_api_key"] = (
+                self.siliconflow_proxy_api_key
+            )
             os.environ["siliconflow_proxyllm_proxyllm_backend"] = os.getenv(
                 "SILICONFLOW_MODEL_VERSION", "Qwen/Qwen2.5-Coder-32B-Instruct"
             )

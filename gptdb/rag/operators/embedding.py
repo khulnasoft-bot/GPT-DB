@@ -94,7 +94,7 @@ class EmbeddingRetrieverOperator(RetrieverOperator[Union[str, List[str]], List[C
         score_threshold: float = 0.3,
         query_rewrite: Optional[QueryRewrite] = None,
         rerank: Optional[Ranker] = None,
-        **kwargs
+        **kwargs,
     ):
         """Create a new EmbeddingRetrieverOperator."""
         super().__init__(**kwargs)
@@ -168,7 +168,7 @@ class EmbeddingAssemblerOperator(AssemblerOperator[Knowledge, List[Chunk]]):
         self,
         index_store: IndexStoreBase,
         chunk_parameters: Optional[ChunkParameters] = None,
-        **kwargs
+        **kwargs,
     ):
         """Create a new EmbeddingAssemblerOperator.
 

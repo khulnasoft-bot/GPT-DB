@@ -198,9 +198,9 @@ class KnowledgeService:
             raise Exception(f"there is no space id called {space}")
         res = DocumentQueryResponse()
         if request.doc_ids and len(request.doc_ids) > 0:
-            documents: List[
-                KnowledgeDocumentEntity
-            ] = knowledge_document_dao.documents_by_ids(request.doc_ids)
+            documents: List[KnowledgeDocumentEntity] = (
+                knowledge_document_dao.documents_by_ids(request.doc_ids)
+            )
             res.data = [item.to_dict() for item in documents]
         else:
             space_name = ks.name

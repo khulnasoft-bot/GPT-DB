@@ -1,4 +1,5 @@
 """Base Assembler Operator."""
+
 from abc import abstractmethod
 
 from gptdb.core.awel import MapOperator

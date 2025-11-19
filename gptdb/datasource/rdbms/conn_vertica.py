@@ -1,4 +1,5 @@
 """Vertica connector."""
+
 import logging
 from typing import Any, Dict, Iterable, List, Optional, Tuple, cast
 from urllib.parse import quote

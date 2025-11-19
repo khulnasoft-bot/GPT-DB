@@ -1,4 +1,5 @@
 """URL Knowledge."""
+
 from typing import Any, List, Optional
 
 from gptdb.core import Document

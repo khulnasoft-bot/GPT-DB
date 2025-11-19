@@ -2,6 +2,7 @@
 
 Warning: This operator is in development and is not yet ready for production use.
 """
+
 from typing import Any
 
 from gptdb.core.awel import MapOperator

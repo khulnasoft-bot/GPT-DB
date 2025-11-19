@@ -1,4 +1,5 @@
 """Evaluation."""
+
 from typing import List
 
 from gptdb.core.schema.api import Result

@@ -83,7 +83,7 @@ class SummaryAssemblerOperator(AssemblerOperator[Any, Any]):
         language: Optional[str] = "en",
         max_iteration_with_llm: Optional[int] = 5,
         concurrency_limit_with_llm: Optional[int] = 3,
-        **kwargs
+        **kwargs,
     ):
         """Create the summary assemble operator.
 

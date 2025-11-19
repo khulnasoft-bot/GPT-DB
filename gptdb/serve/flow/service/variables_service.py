@@ -333,14 +333,14 @@ class VariablesService(
                 desc_order_column="gmt_modified",
             )
         else:
-            variables: List[
-                StorageVariables
-            ] = await self.variables_provider.async_get_variables(
-                key=key,
-                scope=scope,
-                scope_key=scope_key,
-                sys_code=sys_code,
-                user_name=user_name,
+            variables: List[StorageVariables] = (
+                await self.variables_provider.async_get_variables(
+                    key=key,
+                    scope=scope,
+                    scope_key=scope_key,
+                    sys_code=sys_code,
+                    user_name=user_name,
+                )
             )
             result_variables = []
             for entity in variables:

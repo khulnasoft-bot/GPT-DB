@@ -174,9 +174,9 @@ class MultiAgents(BaseComponent, ABC):
         logger.info(
             f"agent_chat_v2 conv_id:{conv_id},gpts_name:{gpts_name},user_query:{user_query}"
         )
-        gpts_conversations: List[
-            GptsConversationsEntity
-        ] = self.gpts_conversations.get_like_conv_id_asc(conv_id)
+        gpts_conversations: List[GptsConversationsEntity] = (
+            self.gpts_conversations.get_like_conv_id_asc(conv_id)
+        )
         logger.info(
             f"gpts_conversations count:{conv_id},{len(gpts_conversations) if gpts_conversations else 0}"
         )
@@ -197,9 +197,9 @@ class MultiAgents(BaseComponent, ABC):
                 is_retry_chat = True
                 agent_conv_id = last_gpts_conversation.conv_id
 
-                gpts_messages: List[
-                    GptsMessage
-                ] = self.gpts_messages_dao.get_by_conv_id(agent_conv_id)
+                gpts_messages: List[GptsMessage] = (
+                    self.gpts_messages_dao.get_by_conv_id(agent_conv_id)
+                )
                 history_message_count = len(gpts_messages)
                 history_messages = gpts_messages
                 last_message = gpts_messages[-1]
@@ -241,10 +241,10 @@ class MultiAgents(BaseComponent, ABC):
                         gpts_conversations
                     ):
                         if gpt_app.keep_start_rounds > 0:
-                            front = gpts_conversations[gpt_app.keep_start_rounds:]
+                            front = gpts_conversations[gpt_app.keep_start_rounds :]
                             rely_conversations.extend(front)
                         if gpt_app.keep_end_rounds > 0:
-                            back = gpts_conversations[-gpt_app.keep_end_rounds:]
+                            back = gpts_conversations[-gpt_app.keep_end_rounds :]
                             rely_conversations.extend(back)
                     else:
                         rely_conversations = gpts_conversations
@@ -349,7 +349,9 @@ class MultiAgents(BaseComponent, ABC):
                     yield task, f'data:{json.dumps({"vis": "[DONE]"}, default=serialize, ensure_ascii=False)} \n\n', agent_conv_id
 
                 else:
-                    logger.info(f"{agent_conv_id}开启简略消息模式，不进行vis协议封装，获取极简流式消息直接输出")
+                    logger.info(
+                        f"{agent_conv_id}开启简略消息模式，不进行vis协议封装，获取极简流式消息直接输出"
+                    )
                     # 开启简略消息模式，不进行vis协议封装，获取极简流式消息直接输出
                     final_message_chunk = None
                     async for chunk in multi_agents.chat_messages(agent_conv_id):
@@ -646,9 +648,9 @@ class MultiAgents(BaseComponent, ABC):
         self,
         conv_id: str,
     ):
-        gpts_conversations: List[
-            GptsConversationsEntity
-        ] = self.gpts_conversations.get_like_conv_id_asc(conv_id)
+        gpts_conversations: List[GptsConversationsEntity] = (
+            self.gpts_conversations.get_like_conv_id_asc(conv_id)
+        )
         # 检查最后一个对话记录是否完成，如果是等待状态，则要继续进行当前对话
         if gpts_conversations and len(gpts_conversations) > 0:
             last_gpts_conversation: GptsConversationsEntity = gpts_conversations[-1]

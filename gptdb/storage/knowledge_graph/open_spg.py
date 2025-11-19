@@ -1,4 +1,5 @@
 """OpenSPG class."""
+
 import logging
 
 from gptdb._private.pydantic import ConfigDict

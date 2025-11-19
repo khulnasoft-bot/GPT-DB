@@ -1,4 +1,5 @@
 """VisGptdbsFlowResult."""
+
 from ..base import Vis
 
 

@@ -1,4 +1,5 @@
 """Configuration for database connection."""
+
 from gptdb._private.pydantic import BaseModel, Field
 
 

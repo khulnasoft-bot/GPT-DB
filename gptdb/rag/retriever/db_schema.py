@@ -1,4 +1,5 @@
 """DBSchema retriever."""
+
 import logging
 import os
 from typing import List, Optional
@@ -32,7 +33,7 @@ class DBSchemaRetriever(BaseRetriever):
         connector: Optional[BaseConnector] = None,
         query_rewrite: bool = False,
         rerank: Optional[Ranker] = None,
-        **kwargs
+        **kwargs,
     ):
         """Create DBSchemaRetriever.
 

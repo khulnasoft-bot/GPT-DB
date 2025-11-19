@@ -1,4 +1,5 @@
 """Base agent class for conversable agents."""
+
 from __future__ import annotations
 
 import asyncio
@@ -705,12 +706,16 @@ class ConversableAgent(Role, Agent):
             role=role,
             rounds=message.rounds,
             is_success=message.success,
-            app_code=sender.not_null_agent_context.gpts_app_code
-            if isinstance(sender, ConversableAgent)
-            else None,
-            app_name=sender.not_null_agent_context.gpts_app_name
-            if isinstance(sender, ConversableAgent)
-            else None,
+            app_code=(
+                sender.not_null_agent_context.gpts_app_code
+                if isinstance(sender, ConversableAgent)
+                else None
+            ),
+            app_name=(
+                sender.not_null_agent_context.gpts_app_name
+                if isinstance(sender, ConversableAgent)
+                else None
+            ),
             current_goal=message.current_goal,
             content=message.content if message.content else "",
             context=(
@@ -866,9 +871,11 @@ class ConversableAgent(Role, Agent):
                     context=(
                         json.loads(item.context) if item.context is not None else None
                     ),
-                    action_report=ActionOutput.from_dict(json.loads(item.action_report))
-                    if item.action_report
-                    else None,
+                    action_report=(
+                        ActionOutput.from_dict(json.loads(item.action_report))
+                        if item.action_report
+                        else None
+                    ),
                     name=item.sender,
                     rounds=item.rounds,
                     model_name=item.model_name,

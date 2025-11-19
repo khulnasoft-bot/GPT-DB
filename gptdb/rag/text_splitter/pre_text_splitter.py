@@ -1,4 +1,5 @@
 """Pre text splitter."""
+
 from typing import Iterable, List
 
 from gptdb.core import Chunk, Document

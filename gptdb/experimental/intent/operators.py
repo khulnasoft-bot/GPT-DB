@@ -20,7 +20,7 @@ class IntentDetectionOperator(
         prompt_template: Optional[str] = None,
         response_format: Optional[str] = None,
         examples: Optional[str] = None,
-        **kwargs
+        **kwargs,
     ):
         """Create the intent detection operator."""
         MixinLLMOperator.__init__(self)

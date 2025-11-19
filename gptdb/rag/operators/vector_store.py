@@ -1,4 +1,5 @@
 """Vector Storage Operator."""
+
 import os
 from typing import List, Optional
 

@@ -42,7 +42,7 @@ class YiLLMClient(OpenAILLMClient):
         context_length: Optional[int] = None,
         openai_client: Optional["ClientType"] = None,
         openai_kwargs: Optional[Dict[str, Any]] = None,
-        **kwargs
+        **kwargs,
     ):
         api_base = (
             api_base or os.getenv("YI_API_BASE") or "https://api.lingyiwanwu.com/v1"
@@ -72,7 +72,7 @@ class YiLLMClient(OpenAILLMClient):
             context_length=context_length,
             openai_client=openai_client,
             openai_kwargs=openai_kwargs,
-            **kwargs
+            **kwargs,
         )
 
     @property

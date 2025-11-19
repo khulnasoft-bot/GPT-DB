@@ -144,9 +144,9 @@ class StartAppAssistantAgent(ConversableAgent):
                 init_message_rounds=message.rounds,
                 **kwargs,
             )
-            history_messages: List[
-                GptsMessage
-            ] = await self.memory.gpts_memory.get_messages(self.agent_context.conv_id)
+            history_messages: List[GptsMessage] = (
+                await self.memory.gpts_memory.get_messages(self.agent_context.conv_id)
+            )
             last_gpt_message = history_messages[-1]
             if history_messages:
                 message.rounds = last_gpt_message.rounds

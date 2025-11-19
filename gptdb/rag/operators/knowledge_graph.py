@@ -1,4 +1,5 @@
 """Knowledge Graph Operator."""
+
 import os
 from typing import List, Optional
 

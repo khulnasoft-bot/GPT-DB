@@ -1,4 +1,5 @@
 """Knowledge Process Branch Operator."""
+
 from typing import Dict, List, Optional
 
 from gptdb.core import Chunk

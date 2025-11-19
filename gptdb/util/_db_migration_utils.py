@@ -132,9 +132,10 @@ def generate_sql_for_upgrade(
     import contextlib
     import io
 
-    with engine.connect() as connection, contextlib.redirect_stdout(
-        io.StringIO()
-    ) as stdout:
+    with (
+        engine.connect() as connection,
+        contextlib.redirect_stdout(io.StringIO()) as stdout,
+    ):
         alembic_cfg.attributes["connection"] = connection
         # Generating SQL instead of applying changes
         command.upgrade(alembic_cfg, target_version, sql=True)

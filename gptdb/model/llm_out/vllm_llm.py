@@ -58,7 +58,7 @@ async def generate_stream(
         top_p=top_p,
         use_beam_search=False,
         max_tokens=max_new_tokens,
-        **gen_params
+        **gen_params,
     )
 
     results_generator = model.generate(prompt, sampling_params, request_id)

@@ -1,4 +1,5 @@
 """Indicator Agent."""
+
 import logging
 
 from ..core.base_agent import ConversableAgent

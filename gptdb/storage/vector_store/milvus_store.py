@@ -1,4 +1,5 @@
 """Milvus vector store."""
+
 from __future__ import annotations
 
 import json
@@ -389,7 +390,7 @@ class MilvusStore(VectorStoreBase):
         """Load document in vector database."""
         batch_size = 500
         batched_list = [
-            chunks[i: i + batch_size] for i in range(0, len(chunks), batch_size)
+            chunks[i : i + batch_size] for i in range(0, len(chunks), batch_size)
         ]
         doc_ids = []
         for doc_batch in batched_list:

@@ -78,7 +78,7 @@ class KnowledgeOperator(MapOperator[dict, Knowledge]):
         self,
         datasource: Optional[str] = None,
         knowledge_type: Optional[str] = KnowledgeType.DOCUMENT.name,
-        **kwargs
+        **kwargs,
     ):
         """Init the query rewrite operator.
 

@@ -132,9 +132,9 @@ class BasePromptBuilderOperator(BaseConversationOperator, ABC):
             messages (List[ModelMessage]): The messages.
         """
         lass_user_message = ModelMessage.parse_user_message(messages)
-        storage_conv: Optional[
-            StorageConversation
-        ] = await self.get_storage_conversation()
+        storage_conv: Optional[StorageConversation] = (
+            await self.get_storage_conversation()
+        )
         if not storage_conv:
             return
         # Start new round
@@ -146,16 +146,16 @@ class BasePromptBuilderOperator(BaseConversationOperator, ABC):
         if not self._save_to_storage:
             return
         # Save the storage conversation to storage after the whole DAG finished
-        storage_conv: Optional[
-            StorageConversation
-        ] = await self.get_storage_conversation()
+        storage_conv: Optional[StorageConversation] = (
+            await self.get_storage_conversation()
+        )
 
         if not storage_conv:
             return
-        model_output: Optional[
-            ModelOutput
-        ] = await self.current_dag_context.get_from_share_data(
-            BaseLLM.SHARE_DATA_KEY_MODEL_OUTPUT
+        model_output: Optional[ModelOutput] = (
+            await self.current_dag_context.get_from_share_data(
+                BaseLLM.SHARE_DATA_KEY_MODEL_OUTPUT
+            )
         )
         if model_output:
             # Save model output message to storage

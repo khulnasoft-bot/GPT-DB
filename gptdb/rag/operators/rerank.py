@@ -1,4 +1,5 @@
 """The Rerank Operator."""
+
 from typing import List, Optional
 
 from gptdb.core import Chunk
@@ -14,7 +15,7 @@ class RerankOperator(MapOperator[List[Chunk], List[Chunk]]):
         topk: int = 3,
         algorithm: str = "default",
         rank_fn: Optional[RANK_FUNC] = None,
-        **kwargs
+        **kwargs,
     ):
         """Create a new RerankOperator.
 

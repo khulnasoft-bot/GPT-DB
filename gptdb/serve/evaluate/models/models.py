@@ -1,6 +1,7 @@
 """This is an auto-generated model file
 You can define your own models and DAOs here
 """
+
 import json
 import uuid
 from datetime import datetime
@@ -77,9 +78,11 @@ class ServeDao(BaseDao[ServeEntity, EvaluateServeRequest, EvaluateServeResponse]
             evaluate_code=request_dict.get("evaluate_code", None),
             scene_key=request_dict.get("scene_key", None),
             scene_value=request_dict.get("scene_value", None),
-            context=json.dumps(request_dict.get("context", None))
-            if request_dict.get("context", None)
-            else None,
+            context=(
+                json.dumps(request_dict.get("context", None))
+                if request_dict.get("context", None)
+                else None
+            ),
             evaluate_metrics=request_dict.get("evaluate_metrics", None),
             datasets_name=request_dict.get("datasets_name", None),
             datasets=request_dict.get("datasets", None),

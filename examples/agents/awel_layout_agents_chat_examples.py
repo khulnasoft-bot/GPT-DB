@@ -13,6 +13,7 @@
         ..code-block:: shell
             python examples/agents/awel_layout_agents_chat_examples.py
 """
+
 import asyncio
 import os
 
@@ -45,7 +46,9 @@ async def main():
             ),
         )
 
-        context: AgentContext = AgentContext(conv_id="test456", gpts_app_name="信息析助手")
+        context: AgentContext = AgentContext(
+            conv_id="test456", gpts_app_name="信息析助手"
+        )
 
         tools = ToolPack([baidu_search])
         tool_engineer = (

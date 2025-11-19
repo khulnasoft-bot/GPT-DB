@@ -1,4 +1,5 @@
 """Index store base class."""
+
 import logging
 import time
 from abc import ABC, abstractmethod
@@ -136,7 +137,7 @@ class IndexStoreBase(ABC):
         """
         # Group the chunks into chunks of size max_chunks
         chunk_groups = [
-            chunks[i: i + max_chunks_once_load]
+            chunks[i : i + max_chunks_once_load]
             for i in range(0, len(chunks), max_chunks_once_load)
         ]
         logger.info(
@@ -174,7 +175,7 @@ class IndexStoreBase(ABC):
             List[str]: Chunk ids.
         """
         chunk_groups = [
-            chunks[i: i + max_chunks_once_load]
+            chunks[i : i + max_chunks_once_load]
             for i in range(0, len(chunks), max_chunks_once_load)
         ]
         logger.info(

@@ -26,6 +26,7 @@ This example shows how to use AWEL to build a simple rag summary example.
             "url": "https://docs.gptdb.site/docs/awel"
         }'
 """
+
 from typing import Dict
 
 from gptdb._private.pydantic import BaseModel, Field

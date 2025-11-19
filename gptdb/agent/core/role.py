@@ -40,7 +40,7 @@ class Role(ABC, BaseModel):
         most_recent_memories: Optional[str] = None,
         resource_vars: Optional[Dict] = None,
         is_retry_chat: bool = False,
-        **kwargs
+        **kwargs,
     ) -> str:
         """Return the prompt template for the role.
 

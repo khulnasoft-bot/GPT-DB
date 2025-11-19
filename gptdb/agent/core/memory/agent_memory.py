@@ -144,7 +144,7 @@ class AgentMemoryFragment(MemoryFragment):
         importance: Optional[float] = None,
         is_insight: bool = False,
         last_accessed_time: Optional[datetime] = None,
-        **kwargs
+        **kwargs,
     ) -> "AgentMemoryFragment":
         """Build a memory fragment from the given parameters."""
         return cls(

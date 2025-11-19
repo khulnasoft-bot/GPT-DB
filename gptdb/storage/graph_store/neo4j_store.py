@@ -1,4 +1,5 @@
 """Neo4j store."""
+
 import logging
 
 from gptdb._private.pydantic import ConfigDict

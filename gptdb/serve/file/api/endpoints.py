@@ -152,9 +152,9 @@ async def download_file(
     response = StreamingResponse(
         file_iterator(file_data), media_type="application/octet-stream"
     )
-    response.headers[
-        "Content-Disposition"
-    ] = f"attachment; filename={file_name_encoded}"
+    response.headers["Content-Disposition"] = (
+        f"attachment; filename={file_name_encoded}"
+    )
     return response
 
 

@@ -1,4 +1,5 @@
 """OpenSearch index store."""
+
 from typing import List, Optional
 
 from gptdb.core import Chunk

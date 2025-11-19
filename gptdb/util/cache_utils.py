@@ -20,8 +20,7 @@ class IdentityFunction(Protocol):  # pylint: disable=too-few-public-methods
     Type for a function returning the same type as the one it received.
     """
 
-    def __call__(self, __x: _T) -> _T:
-        ...
+    def __call__(self, __x: _T) -> _T: ...
 
 
 class NullContext:

@@ -1,4 +1,5 @@
 """UnifiedDBManagerFactory is a factory class to create a DatabaseManager instance."""
+
 from gptdb.component import BaseComponent, ComponentType, SystemApp
 
 from .db_manager import DatabaseManager

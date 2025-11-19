@@ -1,6 +1,7 @@
 """
 Run unit test with command: pytest gptdb/datasource/rdbms/tests/test_conn_sqlite.py
 """
+
 import os
 import tempfile
 

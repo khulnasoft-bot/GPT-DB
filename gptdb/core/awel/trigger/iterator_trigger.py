@@ -47,7 +47,7 @@ class IteratorTrigger(Trigger[List[Tuple[Any, Any]]]):
         parallel_num: int = 1,
         streaming_call: bool = False,
         show_progress: bool = True,
-        **kwargs
+        **kwargs,
     ):
         """Create a IteratorTrigger.
 

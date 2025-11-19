@@ -72,7 +72,10 @@ class IntentRecognitionAction(Action[IntentRecognitionInput]):
             out_put_schema = {
                 "intent": "选择的意图放在这里",
                 "app_code": "选择意图对应的Appcode值",
-                "slots": {"意图定义中槽位属性1": "具体值", "意图定义中槽位属性2": "具体值"},
+                "slots": {
+                    "意图定义中槽位属性1": "具体值",
+                    "意图定义中槽位属性2": "具体值",
+                },
                 "ask_user": "如果需要用户补充槽位属性的具体值,请向用户进行提问",
                 "user_input": "根据意图和槽位生成完整指令问题",
             }

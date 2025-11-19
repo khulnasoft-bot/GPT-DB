@@ -1,4 +1,5 @@
 """Viss Agent Plans."""
+
 from ..base import Vis
 
 

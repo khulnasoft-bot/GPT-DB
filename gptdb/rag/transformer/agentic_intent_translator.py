@@ -1,4 +1,5 @@
 """Agentic ntentTranslator class."""
+
 import logging
 
 from gptdb.rag.transformer.base import TranslatorBase

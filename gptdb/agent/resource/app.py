@@ -127,7 +127,8 @@ class AppResource(Resource[ResourceParameters]):
     ) -> Tuple[str, Optional[Dict]]:
         """Get the prompt."""
         prompt_template_zh = (
-            "{name}：调用此资源与应用 {app_name} 进行交互。" "应用 {app_name} 有什么用？{description}"
+            "{name}：调用此资源与应用 {app_name} 进行交互。"
+            "应用 {app_name} 有什么用？{description}"
         )
         prompt_template_en = (
             "{name}：Call this resource to interact with the application {app_name} ."

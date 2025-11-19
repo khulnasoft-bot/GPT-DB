@@ -1,4 +1,5 @@
 """The message operator."""
+
 import logging
 import uuid
 from abc import ABC
@@ -509,12 +510,12 @@ class BufferedConversationMapperOperator(ConversationMapperOperator):
                 return messages_by_round
             return (
                 messages_by_round[: self._keep_start_rounds]
-                + messages_by_round[-self._keep_end_rounds:]
+                + messages_by_round[-self._keep_end_rounds :]
             )
         elif self._keep_start_rounds:
             return messages_by_round[: self._keep_start_rounds]
         elif self._keep_end_rounds:
-            return messages_by_round[-self._keep_end_rounds:]
+            return messages_by_round[-self._keep_end_rounds :]
         else:
             return []
 

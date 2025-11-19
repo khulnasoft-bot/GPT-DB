@@ -1,4 +1,5 @@
 """The DBSchema Retriever Operator."""
+
 import os
 from typing import List, Optional
 
@@ -30,7 +31,7 @@ class DBSchemaRetrieverOperator(RetrieverOperator[str, List[Chunk]]):
         field_vector_store_connector: VectorStoreConnector,
         top_k: int = 4,
         connector: Optional[BaseConnector] = None,
-        **kwargs
+        **kwargs,
     ):
         """Create a new DBSchemaRetrieverOperator."""
         super().__init__(**kwargs)
@@ -59,7 +60,7 @@ class DBSchemaAssemblerOperator(AssemblerOperator[BaseConnector, List[Chunk]]):
         table_vector_store_connector: VectorStoreConnector,
         field_vector_store_connector: VectorStoreConnector = None,
         chunk_parameters: Optional[ChunkParameters] = None,
-        **kwargs
+        **kwargs,
     ):
         """Create a new DBSchemaAssemblerOperator.
 

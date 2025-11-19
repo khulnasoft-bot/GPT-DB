@@ -10,6 +10,7 @@
         curl -X GET $GPTDB_SERVER/api/v1/awel/trigger/examples/hello\?name\=zhangsan
 
 """
+
 from gptdb._private.pydantic import BaseModel, Field
 from gptdb.core.awel import DAG, HttpTrigger, MapOperator
 

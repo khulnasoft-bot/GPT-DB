@@ -201,7 +201,7 @@ class Profile(ABC):
         most_recent_memories: Optional[str] = None,
         resource_vars: Optional[Dict[str, Any]] = None,
         is_retry_chat: bool = False,
-        **kwargs
+        **kwargs,
     ) -> str:
         """Format the system prompt.
 
@@ -224,7 +224,7 @@ class Profile(ABC):
             most_recent_memories=most_recent_memories,
             resource_vars=resource_vars,
             is_retry_chat=is_retry_chat,
-            **kwargs
+            **kwargs,
         )
 
     def format_user_prompt(
@@ -234,7 +234,7 @@ class Profile(ABC):
         language: str = "en",
         most_recent_memories: Optional[str] = None,
         resource_vars: Optional[Dict[str, Any]] = None,
-        **kwargs
+        **kwargs,
     ) -> str:
         """Format the user prompt.
 
@@ -256,7 +256,7 @@ class Profile(ABC):
             language=language,
             most_recent_memories=most_recent_memories,
             resource_vars=resource_vars,
-            **kwargs
+            **kwargs,
         )
 
     @property
@@ -280,7 +280,7 @@ class Profile(ABC):
         most_recent_memories: Optional[str] = None,
         resource_vars: Optional[Dict[str, Any]] = None,
         is_retry_chat: bool = False,
-        **kwargs
+        **kwargs,
     ) -> str:
         """Format the prompt."""
         if not template_env:

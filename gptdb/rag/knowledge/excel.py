@@ -1,4 +1,5 @@
 """Excel Knowledge."""
+
 from typing import Any, Dict, List, Optional, Union
 
 import pandas as pd

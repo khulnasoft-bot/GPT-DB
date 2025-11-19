@@ -24,9 +24,9 @@ class TextBasedGraphRetriever(GraphRetrieverBase):
 
     async def retrieve(self, text: str) -> Tuple[Graph, str]:
         """Retrieve from triplets graph with text2gql."""
-        intention: Dict[
-            str, Union[str, List[str]]
-        ] = await self._intent_interpreter.translate(text)
+        intention: Dict[str, Union[str, List[str]]] = (
+            await self._intent_interpreter.translate(text)
+        )
         schema = json.dumps(
             json.loads(self._graph_store_adapter.get_schema()), indent=4
         )

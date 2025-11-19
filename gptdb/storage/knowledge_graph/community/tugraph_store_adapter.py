@@ -201,27 +201,29 @@ class TuGraphStoreAdapter(GraphStoreAdapter):
         """Upsert chunks."""
         enable_similarity_search = self.graph_store.enable_similarity_search
         chunk_list: List[Dict[str, Union[str, List[float]]]] = [
-            {
-                "id": self._escape_quotes(chunk.chunk_id),
-                "name": self._escape_quotes(chunk.chunk_name),
-                "content": self._escape_quotes(chunk.content),
-                **(
-                    {"_embedding": chunk.embedding}
-                    if enable_similarity_search and chunk.embedding
-                    else {}
-                ),
-            }
-            if isinstance(chunk, ParagraphChunk)
-            else {
-                "id": self._escape_quotes(chunk.vid),
-                "name": self._escape_quotes(chunk.name),
-                "content": self._escape_quotes(chunk.get_prop("content")),
-                **(
-                    {"_embedding": chunk.get_prop("_embedding")}
-                    if enable_similarity_search
-                    else {}
-                ),
-            }
+            (
+                {
+                    "id": self._escape_quotes(chunk.chunk_id),
+                    "name": self._escape_quotes(chunk.chunk_name),
+                    "content": self._escape_quotes(chunk.content),
+                    **(
+                        {"_embedding": chunk.embedding}
+                        if enable_similarity_search and chunk.embedding
+                        else {}
+                    ),
+                }
+                if isinstance(chunk, ParagraphChunk)
+                else {
+                    "id": self._escape_quotes(chunk.vid),
+                    "name": self._escape_quotes(chunk.name),
+                    "content": self._escape_quotes(chunk.get_prop("content")),
+                    **(
+                        {"_embedding": chunk.get_prop("_embedding")}
+                        if enable_similarity_search
+                        else {}
+                    ),
+                }
+            )
             for chunk in chunks
         ]
         if len(chunk_list) == 0:
@@ -262,17 +264,19 @@ class TuGraphStoreAdapter(GraphStoreAdapter):
     ) -> None:
         """Upsert documents."""
         document_list = [
-            {
-                "id": self._escape_quotes(document.chunk_id),
-                "name": self._escape_quotes(document.chunk_name),
-                "content": "",
-            }
-            if isinstance(document, ParagraphChunk)
-            else {
-                "id": self._escape_quotes(document.vid),
-                "name": self._escape_quotes(document.name),
-                "content": "",
-            }
+            (
+                {
+                    "id": self._escape_quotes(document.chunk_id),
+                    "name": self._escape_quotes(document.chunk_name),
+                    "content": "",
+                }
+                if isinstance(document, ParagraphChunk)
+                else {
+                    "id": self._escape_quotes(document.vid),
+                    "name": self._escape_quotes(document.name),
+                    "content": "",
+                }
+            )
             for document in documents
         ]
 

@@ -110,15 +110,15 @@ class BaseHOLLMOperator(
         return task_output
 
     async def after_dag_end(self, event_loop_task_id: int):
-        model_output: Optional[
-            ModelOutput
-        ] = await self.current_dag_context.get_from_share_data(
-            LLMOperator.SHARE_DATA_KEY_MODEL_OUTPUT
+        model_output: Optional[ModelOutput] = (
+            await self.current_dag_context.get_from_share_data(
+                LLMOperator.SHARE_DATA_KEY_MODEL_OUTPUT
+            )
         )
-        model_output_view: Optional[
-            str
-        ] = await self.current_dag_context.get_from_share_data(
-            LLMOperator.SHARE_DATA_KEY_MODEL_OUTPUT_VIEW
+        model_output_view: Optional[str] = (
+            await self.current_dag_context.get_from_share_data(
+                LLMOperator.SHARE_DATA_KEY_MODEL_OUTPUT_VIEW
+            )
         )
         storage_conv = await self.get_storage_conversation()
         end_current_round: bool = False

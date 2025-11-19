@@ -1,5 +1,6 @@
 """GPT-DB: Next Generation Data Interaction Solution with LLMs.
 """
+
 from gptdb import _version  # noqa: E402
 from gptdb.component import BaseComponent, SystemApp  # noqa: F401
 

@@ -1,4 +1,5 @@
 """AwelIntentTranslator class."""
+
 import logging
 
 from gptdb.rag.transformer.base import TranslatorBase

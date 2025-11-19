@@ -37,7 +37,9 @@ async def main():
     agent_memory = AgentMemory()
     agent_memory.gpts_memory.init(conv_id="test456")
 
-    context: AgentContext = AgentContext(conv_id="test456", gpts_app_name="插件对话助手")
+    context: AgentContext = AgentContext(
+        conv_id="test456", gpts_app_name="插件对话助手"
+    )
 
     tools = AutoGPTPluginToolPack(test_plugin_dir)
 

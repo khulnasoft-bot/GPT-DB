@@ -1,4 +1,5 @@
 """App Client API."""
+
 from typing import List
 
 from gptdb.core.schema.api import Result

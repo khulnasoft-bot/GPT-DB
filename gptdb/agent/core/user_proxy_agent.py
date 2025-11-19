@@ -1,4 +1,5 @@
 """A proxy agent for the user."""
+
 from typing import List, Optional
 
 from .. import ActionOutput, Agent, AgentMessage

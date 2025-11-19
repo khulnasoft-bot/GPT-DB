@@ -1,4 +1,5 @@
 """LLMSummarizer class."""
+
 import logging
 from abc import ABC
 

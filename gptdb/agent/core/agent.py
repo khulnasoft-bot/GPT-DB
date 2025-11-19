@@ -290,9 +290,9 @@ class AgentMessage:
         result = dataclasses.asdict(self)
 
         if self.action_report:
-            result[
-                "action_report"
-            ] = self.action_report.to_dict()  # 将 action_report 转换为字典
+            result["action_report"] = (
+                self.action_report.to_dict()
+            )  # 将 action_report 转换为字典
         return result
 
     def to_llm_message(self) -> Dict[str, Any]:

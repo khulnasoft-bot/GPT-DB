@@ -43,7 +43,7 @@ class GiteeLLMClient(OpenAILLMClient):
         context_length: Optional[int] = None,
         openai_client: Optional["ClientType"] = None,
         openai_kwargs: Optional[Dict[str, Any]] = None,
-        **kwargs
+        **kwargs,
     ):
         api_base = api_base or os.getenv("GITEE_API_BASE") or "https://ai.gitee.com/v1"
         api_key = api_key or os.getenv("GITEE_API_KEY")
@@ -72,7 +72,7 @@ class GiteeLLMClient(OpenAILLMClient):
             context_length=context_length,
             openai_client=openai_client,
             openai_kwargs=openai_kwargs,
-            **kwargs
+            **kwargs,
         )
 
     @property

@@ -77,7 +77,7 @@ class HybridMemory(Memory, Generic[T]):
         sensory_memory: Optional[SensoryMemory[T]] = None,
         short_term_memory: Optional[ShortTermMemory[T]] = None,
         long_term_memory: Optional[LongTermMemory[T]] = None,
-        **kwargs
+        **kwargs,
     ):
         """Create a hybrid memory from Chroma vector store."""
         from gptdb.configs.model_config import DATA_DIR
@@ -108,7 +108,7 @@ class HybridMemory(Memory, Generic[T]):
             sensory_memory=sensory_memory,
             short_term_memory=short_term_memory,
             long_term_memory=long_term_memory,
-            **kwargs
+            **kwargs,
         )
 
     @classmethod
@@ -121,7 +121,7 @@ class HybridMemory(Memory, Generic[T]):
         sensory_memory: Optional[SensoryMemory[T]] = None,
         short_term_memory: Optional[ShortTermMemory[T]] = None,
         long_term_memory: Optional[LongTermMemory[T]] = None,
-        **kwargs
+        **kwargs,
     ):
         """Create a hybrid memory from vector store."""
         if not embeddings:

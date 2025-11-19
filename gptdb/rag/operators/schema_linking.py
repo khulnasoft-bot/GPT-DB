@@ -22,7 +22,7 @@ class SchemaLinkingOperator(MapOperator[Any, Any]):
         llm: LLMClient,
         top_k: int = 5,
         index_store: Optional[IndexStoreBase] = None,
-        **kwargs
+        **kwargs,
     ):
         """Create the schema linking operator.
 

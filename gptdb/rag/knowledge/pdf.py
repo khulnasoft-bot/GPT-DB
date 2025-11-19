@@ -1,4 +1,5 @@
 """PDF Knowledge."""
+
 import json
 import os
 import re

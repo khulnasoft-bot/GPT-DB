@@ -72,7 +72,7 @@ class QueryRewriteOperator(MapOperator[dict, Any]):
         model_name: str = "gpt-3.5-turbo",
         language: Optional[str] = "en",
         nums: Optional[int] = 1,
-        **kwargs
+        **kwargs,
     ):
         """Init the query rewrite operator.
 

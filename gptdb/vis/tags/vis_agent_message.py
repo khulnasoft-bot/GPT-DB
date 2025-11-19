@@ -1,4 +1,5 @@
 """Vis Agent Messages."""
+
 from ..base import Vis
 
 

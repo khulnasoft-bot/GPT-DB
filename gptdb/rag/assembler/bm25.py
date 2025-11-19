@@ -1,4 +1,5 @@
 """BM25 Assembler."""
+
 import json
 from concurrent.futures import Executor, ThreadPoolExecutor
 from typing import Any, List, Optional
