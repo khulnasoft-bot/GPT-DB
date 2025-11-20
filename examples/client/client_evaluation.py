@@ -55,9 +55,9 @@ Example:
 
 import asyncio
 
-from gptdb.client import Client
-from gptdb.client.evaluation import run_evaluation
-from gptdb.serve.evaluate.api.schemas import EvaluateServeRequest
+from gptdb_client import Client
+from gptdb_client.evaluation import run_evaluation
+from gptdb_serve.evaluate.api.schemas import EvaluateServeRequest
 
 
 async def main():
@@ -83,8 +83,12 @@ async def main():
             }
         ],
     )
-    data = await run_evaluation(client, request=request)
-    print(data)
+    try:
+        data = await run_evaluation(client, request=request)
+        print(data)
+    finally:
+        # explicitly close client to avoid event loop closed error
+        await client.aclose()
 
 
 if __name__ == "__main__":

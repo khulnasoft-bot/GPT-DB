@@ -7,7 +7,7 @@ SCRIPT_LOCATION=$0
 cd "$(dirname "$SCRIPT_LOCATION")"
 WORK_DIR=$(pwd)
 WORK_DIR="$WORK_DIR/.."
-TARGET_DIR="$WORK_DIR/gptdb/app/static/web"
+TARGET_DIR="$WORK_DIR/packages/gptdb-app/src/gptdb_app/static/web"
 
 echo "Building web static files"
 echo "Target directory: $TARGET_DIR"

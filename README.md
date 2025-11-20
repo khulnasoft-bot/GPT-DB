@@ -1,31 +1,40 @@
-# GPT-DB: AI Native Data App Development framework with AWEL(Agentic Workflow Expression Language) and Agents
+# <img src="./assets/LOGO_SMALL.png" alt="Logo" style="vertical-align: middle; height: 24px;" /> GPT-DB: AI Native Data App Development framework with AWEL and Agents
 
 <p align="left">
-  <img src="./assets/LOGO.png" width="100%" />
+  <img src="./assets/Twitter_LOGO.png" width="100%" />
 </p>
 
 <div align="center">
   <p>
     <a href="https://github.com/khulnasoft/GPT-DB">
-        <img alt="stars" src="https://img.shields.io/github/stars/khulnasoft/db-gpt?style=social" />
+        <img alt="stars" src="https://img.shields.io/github/stars/khulnasoft/gpt-db?style=social" />
     </a>
     <a href="https://github.com/khulnasoft/GPT-DB">
-        <img alt="forks" src="https://img.shields.io/github/forks/khulnasoft/db-gpt?style=social" />
+        <img alt="forks" src="https://img.shields.io/github/forks/khulnasoft/gpt-db?style=social" />
+    </a>
+    <a href="http://gptdb.cn/">
+        <img alt="Official Website" src="https://img.shields.io/badge/Official%20website-DB--GPT-blue?style=flat&labelColor=3366CC" />
     </a>
     <a href="https://opensource.org/licenses/MIT">
-      <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+      <img alt="License: MIT" src="https://img.shields.io/github/license/khulnasoft/gpt-db?style=flat&labelColor=009966&color=009933" />
     </a>
      <a href="https://github.com/khulnasoft/GPT-DB/releases">
-      <img alt="Release Notes" src="https://img.shields.io/github/release/khulnasoft/GPT-DB" />
+      <img alt="Release Notes" src="https://img.shields.io/github/v/release/khulnasoft/gpt-db?style=flat&labelColor=FF9933&color=FF6633" />
     </a>
     <a href="https://github.com/khulnasoft/GPT-DB/issues">
-      <img alt="Open Issues" src="https://img.shields.io/github/issues-raw/khulnasoft/GPT-DB" />
+      <img alt="Open Issues" src="https://img.shields.io/github/issues-raw/khulnasoft/gpt-db?style=flat&labelColor=666666&color=333333" />
     </a>
-    <a href="https://discord.gg/7uQnPuveTY">
-      <img alt="Discord" src="https://dcbadge.vercel.app/api/server/7uQnPuveTY?compact=true&style=flat" />
+    <a href="https://x.com/GPTDB_AI">
+      <img alt="X (formerly Twitter) Follow" src="https://img.shields.io/twitter/follow/GPTDB_AI" />
+    </a>
+    <a href="https://medium.com/@gptdb0506">
+      <img alt="Medium Follow" src="https://badgen.net/badge/Medium/GPT-DB/333333?icon=medium&labelColor=666666" />
+    </a>
+    <a href="https://space.bilibili.com/3537113070963392">
+      <img alt="Bilibili Space" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Frelation%2Fstat%3Fvmid%3D3537113070963392&query=data.follower&style=flat&logo=bilibili&logoColor=white&label=Bilibili%20Fans&labelColor=F37697&color=6495ED" />
     </a>
     <a href="https://join.slack.com/t/slack-inu2564/shared_invite/zt-29rcnyw2b-N~ubOD9kFc7b7MDOAM1otA">
-      <img alt="Slack" src="https://badgen.net/badge/Slack/Join%20GPT-DB/0abd59?icon=slack" />
+      <img alt="Slack" src="https://img.shields.io/badge/Slack-Join%20us-5d6b98?style=flat&logo=slack&labelColor=7d89b0" />
     </a>
     <a href="https://codespaces.new/khulnasoft/GPT-DB">
       <img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" />
@@ -33,7 +42,11 @@
   </p>
 
 
-[**简体中文**](README.zh.md) | [**日本語**](README.ja.md) | [**Discord**](https://discord.gg/7uQnPuveTY) | [**Documents**](https://docs.gptdb.site) | [**微信**](https://github.com/khulnasoft/GPT-DB/blob/main/README.zh.md#%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC) | [**Community**](https://github.com/khulnasoft/community) | [**Paper**](https://arxiv.org/pdf/2312.17449.pdf)
+[![English](https://img.shields.io/badge/English-d9d9d9?style=flat-square)](README.md)
+[![简体中文](https://img.shields.io/badge/简体中文-d9d9d9?style=flat-square)](README.zh.md)
+[![日本語](https://img.shields.io/badge/日本語-d9d9d9?style=flat-square)](README.ja.md) 
+
+[**Documents**](http://docs.gptdb.cn/docs/overview/) | [**Contact Us**](https://github.com/khulnasoft/GPT-DB/blob/main/README.zh.md#%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC) | [**Community**](https://github.com/khulnasoft/community) | [**Paper**](https://arxiv.org/pdf/2312.17449.pdf)
 
 </div>
 
@@ -45,37 +58,7 @@ The purpose is to build infrastructure in the field of large models, through the
 
 🚀 **In the Data 3.0 era, based on models and databases, enterprises and developers can build their own bespoke applications with less code.**
 
-### DISCKAIMER
-- [disckaimer](./DISCKAIMER.md)
-
-### AI-Native Data App 
----
-- 🔥🔥🔥 [Released V0.6.0 | A set of significant upgrades](https://docs.gptdb.cn/docs/changelog/Released_V0.6.0)
-  - [The AWEL upgrade to 2.0]()
-  - [GraphRAG]()
-  - [AI Native Data App construction and management]()
-  - [The GPT-Vis upgrade, supporting a variety of visualization charts]()
-  - [Support Text2NLU and Text2GQL fine-tuning]()
-  - [Support Intent recognition, slot filling, and Prompt management]()
-
----
-
-![app_chat_v0 6](https://github.com/user-attachments/assets/a2f0a875-df8c-4f0d-89a3-eed321c02113)
-
-![app_manage_chat_data_v0 6](https://github.com/user-attachments/assets/c8cc85bb-e3c2-4fab-8fb9-7b4b469d0611)
-
-![chat_dashboard_display_v0 6](https://github.com/user-attachments/assets/b15d6ebe-54c4-4527-a16d-02fbbaf20dc9)
-
-![agent_prompt_awel_v0 6](https://github.com/user-attachments/assets/40761507-a1e1-49d4-b49a-3dd9a5ea41cc)
-
-## Contents
-- [Introduction](#introduction)
-- [Install](#install)
-- [Features](#features)
-- [Contribution](#contribution)
-- [Contact](#contact-information)
-
-## Introduction 
+### Introduction 
 The architecture of GPT-DB is shown in the following figure:
 
 <p align="center">
@@ -96,34 +79,64 @@ The core capabilities include the following parts:
 
 - **Data Sources**: Integrating various data sources to seamlessly connect production business data to the core capabilities of GPT-DB.
 
-### SubModule
-- [GPT-DB-Hub](https://github.com/khulnasoft-lab/GPT-DB-Hub) Text-to-SQL workflow with high performance by applying Supervised Fine-Tuning (SFT) on Large Language Models (LLMs).
+#### SubModule
+- [GPT-DB-Hub](https://github.com/khulnasoft/GPT-DB-Hub) Text-to-SQL workflow with high performance by applying Supervised Fine-Tuning (SFT) on Large Language Models (LLMs).
 
-- [gptdbs](https://github.com/khulnasoft-lab/gptdbs)  gptdbs is the official repository which contains some data apps、AWEL operators、AWEL workflow templates and agents which build upon GPT-DB.
+- [gptdbs](https://github.com/khulnasoft/gptdbs)  gptdbs is the official repository which contains some data apps、AWEL operators、AWEL workflow templates and agents which build upon GPT-DB.
+
+#### DeepWiki
+- [GPT-DB](https://deepwiki.com/khulnasoft/GPT-DB)
+- [GPT-DB-HUB](https://deepwiki.com/khulnasoft/GPT-DB-Hub)
+- [gptdbs](https://deepwiki.com/khulnasoft/gptdbs)
+
 
 #### Text2SQL Finetune
-- support llms
-  - [x] LLaMA
-  - [x] LLaMA-2
-  - [x] BLOOM
-  - [x] BLOOMZ
-  - [x] Falcon
-  - [x] Baichuan
-  - [x] Baichuan2
-  - [x] InternLM
-  - [x] Qwen
-  - [x] XVERSE
-  - [x] ChatGLM2
 
--  SFT Accuracy
-As of October 10, 2023, through the fine-tuning of an open-source model with 13 billion parameters using this project, we have achieved execution accuracy on the Spider dataset that surpasses even GPT-4!
+  |     LLM     |  Supported  | 
+  |:-----------:|:-----------:|
+  |    LLaMA    |      ✅     |
+  |   LLaMA-2   |      ✅     | 
+  |    BLOOM    |      ✅     | 
+  |   BLOOMZ    |      ✅     | 
+  |   Falcon    |      ✅     | 
+  |  Baichuan   |      ✅     | 
+  |  Baichuan2  |      ✅     | 
+  |  InternLM   |      ✅     |
+  |    Qwen     |      ✅     | 
+  |   XVERSE    |      ✅     | 
+  |  ChatGLM2   |      ✅     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 
-[More Information about Text2SQL finetune](https://github.com/khulnasoft-lab/GPT-DB-Hub)
 
-- [GPT-DB-Plugins](https://github.com/khulnasoft-lab/GPT-DB-Plugins) GPT-DB Plugins that can run Auto-GPT plugin directly
-- [GPT-Vis](https://github.com/khulnasoft-lab/GPT-Vis) Visualization protocol
+[More Information about Text2SQL finetune](https://github.com/khulnasoft/GPT-DB-Hub)
 
-## Install 
+- [GPT-DB-Plugins](https://github.com/khulnasoft/GPT-DB-Plugins) GPT-DB Plugins that can run Auto-GPT plugin directly
+- [GPT-Vis](https://github.com/khulnasoft/GPT-Vis) Visualization protocol
+
+### AI-Native Data App 
+---
+- 🔥🔥🔥 [Released V0.7.0 | A set of significant upgrades](http://docs.gptdb.cn/blog/gpt-db-v070-release)
+  - [Support MCP Protocol](https://github.com/khulnasoft/GPT-DB/pull/2497)
+  - [Support DeepSeek R1](https://github.com/deepseek-ai/DeepSeek-R1)
+  - [Support QwQ-32B](https://huggingface.co/Qwen/QwQ-32B)
+  - [Refactor the basic modules]()
+    - [gptdb-app](./packages/gptdb-app)
+    - [gptdb-core](./packages/gptdb-core)
+    - [gptdb-serve](./packages/gptdb-serve)
+    - [gptdb-client](./packages/gptdb-client)
+    - [gptdb-accelerator](./packages/gptdb-accelerator)
+    - [gptdb-ext](./packages/gptdb-ext)
+---
+
+![app_chat_v0 6](https://github.com/user-attachments/assets/a2f0a875-df8c-4f0d-89a3-eed321c02113)
+
+![app_manage_chat_data_v0 6](https://github.com/user-attachments/assets/c8cc85bb-e3c2-4fab-8fb9-7b4b469d0611)
+
+![chat_dashboard_display_v0 6](https://github.com/user-attachments/assets/b15d6ebe-54c4-4527-a16d-02fbbaf20dc9)
+
+![agent_prompt_awel_v0 6](https://github.com/user-attachments/assets/40761507-a1e1-49d4-b49a-3dd9a5ea41cc)
+
+
+## Installation / Quick Start 
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![macOS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0)
@@ -162,52 +175,120 @@ At present, we have introduced several key features to showcase our current capa
 
 - **Automated Fine-tuning text2SQL**
 
-  We've also developed an automated fine-tuning lightweight framework centred on large language models (LLMs), Text2SQL datasets, LoRA/QLoRA/Pturning, and other fine-tuning methods. This framework simplifies Text-to-SQL fine-tuning, making it as straightforward as an assembly line process. [GPT-DB-Hub](https://github.com/khulnasoft-lab/GPT-DB-Hub)
+  We've also developed an automated fine-tuning lightweight framework centred on large language models (LLMs), Text2SQL datasets, LoRA/QLoRA/Pturning, and other fine-tuning methods. This framework simplifies Text-to-SQL fine-tuning, making it as straightforward as an assembly line process. [GPT-DB-Hub](https://github.com/khulnasoft/GPT-DB-Hub)
 
-- **SMMF(Service-oriented Multi-model Management Framework)**
+  - **SMMF(Service-oriented Multi-model Management Framework)**
 
-  We offer extensive model support, including dozens of large language models (LLMs) from both open-source and API agents, such as LLaMA/LLaMA2, Baichuan, ChatGLM, Wenxin, Tongyi, Zhipu, and many more. 
+    We offer extensive model support, including dozens of large language models (LLMs) from both open-source and API agents, such as LLaMA/LLaMA2, Baichuan, ChatGLM, Wenxin, Tongyi, Zhipu, and many more. 
 
   - News
-    - 🔥🔥🔥  [Qwen2.5-72B-Instruct](https://huggingface.co/Qwen/Qwen2.5-72B-Instruct)
-    - 🔥🔥🔥  [Qwen2.5-32B-Instruct](https://huggingface.co/Qwen/Qwen2.5-32B-Instruct)
-    - 🔥🔥🔥  [Qwen2.5-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct)
-    - 🔥🔥🔥  [Qwen2.5-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)
-    - 🔥🔥🔥  [Qwen2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct)
-    - 🔥🔥🔥  [Qwen2.5-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct)
-    - 🔥🔥🔥  [Qwen2.5-0.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct)
-    - 🔥🔥🔥  [Qwen2.5-Coder-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct)
-    - 🔥🔥🔥  [Qwen2.5-Coder-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct)
-    - 🔥🔥🔥  [Meta-Llama-3.1-405B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-405B-Instruct)
-    - 🔥🔥🔥  [Meta-Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct)
-    - 🔥🔥🔥  [Meta-Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct)
-    - 🔥🔥🔥  [gemma-2-27b-it](https://huggingface.co/google/gemma-2-27b-it)
-    - 🔥🔥🔥  [gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it)
-    - 🔥🔥🔥  [DeepSeek-Coder-V2-Instruct](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct)
-    - 🔥🔥🔥  [DeepSeek-Coder-V2-Lite-Instruct](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct)
-    - 🔥🔥🔥  [Qwen2-57B-A14B-Instruct](https://huggingface.co/Qwen/Qwen2-57B-A14B-Instruct)
-    - 🔥🔥🔥  [Qwen2-72B-Instruct](https://huggingface.co/Qwen/Qwen2-72B-Instruct)
-    - 🔥🔥🔥  [Qwen2-7B-Instruct](https://huggingface.co/Qwen/Qwen2-7B-Instruct)
-    - 🔥🔥🔥  [Qwen2-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2-1.5B-Instruct)
-    - 🔥🔥🔥  [Qwen2-0.5B-Instruct](https://huggingface.co/Qwen/Qwen2-0.5B-Instruct)
-    - 🔥🔥🔥  [glm-4-9b-chat](https://huggingface.co/THUDM/glm-4-9b-chat)
-    - 🔥🔥🔥  [Phi-3](https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3)
-    - 🔥🔥🔥  [Yi-1.5-34B-Chat](https://huggingface.co/01-ai/Yi-1.5-34B-Chat)
-    - 🔥🔥🔥  [Yi-1.5-9B-Chat](https://huggingface.co/01-ai/Yi-1.5-9B-Chat)
-    - 🔥🔥🔥  [Yi-1.5-6B-Chat](https://huggingface.co/01-ai/Yi-1.5-6B-Chat)
-    - 🔥🔥🔥  [Qwen1.5-110B-Chat](https://huggingface.co/Qwen/Qwen1.5-110B-Chat)
-    - 🔥🔥🔥  [Qwen1.5-MoE-A2.7B-Chat](https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B-Chat)
-    - 🔥🔥🔥  [Meta-Llama-3-70B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct)
-    - 🔥🔥🔥  [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
-    - 🔥🔥🔥  [CodeQwen1.5-7B-Chat](https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat)
-    - 🔥🔥🔥  [Qwen1.5-32B-Chat](https://huggingface.co/Qwen/Qwen1.5-32B-Chat)
-    - 🔥🔥🔥  [Starling-LM-7B-beta](https://huggingface.co/Nexusflow/Starling-LM-7B-beta)
-    - 🔥🔥🔥  [gemma-7b-it](https://huggingface.co/google/gemma-7b-it)
-    - 🔥🔥🔥  [gemma-2b-it](https://huggingface.co/google/gemma-2b-it)
-    - 🔥🔥🔥  [SOLAR-10.7B](https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0)
-    - 🔥🔥🔥  [Mixtral-8x7B](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1)
-    - 🔥🔥🔥  [Qwen-72B-Chat](https://huggingface.co/Qwen/Qwen-72B-Chat)
-    - 🔥🔥🔥  [Yi-34B-Chat](https://huggingface.co/01-ai/Yi-34B-Chat)
+    <table>
+      <thead>
+        <tr>
+          <th>Provider</th>
+          <th>Supported</th>
+          <th>Models</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center" valign="middle">DeepSeek</td>
+          <td align="center" valign="middle">✅</td>
+          <td>
+            🔥🔥🔥  <a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-0528">DeepSeek-R1-0528</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/deepseek-ai/DeepSeek-V3-0324">DeepSeek-V3-0324</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/deepseek-ai/DeepSeek-R1">DeepSeek-R1</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/deepseek-ai/DeepSeek-V3">DeepSeek-V3</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B">DeepSeek-R1-Distill-Llama-70B</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B">DeepSeek-R1-Distill-Qwen-32B</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct">DeepSeek-Coder-V2-Instruct</a><br/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">Qwen</td>
+          <td align="center" valign="middle">✅</td>
+          <td>
+            🔥🔥🔥  <a href="https://huggingface.co/Qwen/Qwen3-235B-A22B">Qwen3-235B-A22B</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/Qwen/Qwen3-30B-A3B">Qwen3-30B-A3B</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/Qwen/Qwen3-32B">Qwen3-32B</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/Qwen/QwQ-32B">QwQ-32B</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct">Qwen2.5-Coder-32B-Instruct</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct">Qwen2.5-Coder-14B-Instruct</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/Qwen/Qwen2.5-72B-Instruct">Qwen2.5-72B-Instruct</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/Qwen/Qwen2.5-32B-Instruct">Qwen2.5-32B-Instruct</a><br/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">GLM</td>
+          <td align="center" valign="middle">✅</td>
+          <td>
+            🔥🔥🔥  <a href="https://huggingface.co/THUDM/GLM-Z1-32B-0414">GLM-Z1-32B-0414</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/THUDM/GLM-4-32B-0414">GLM-4-32B-0414</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/THUDM/glm-4-9b-chat">Glm-4-9b-chat</a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">Llama</td>
+          <td align="center" valign="middle">✅</td>
+          <td>
+            🔥🔥🔥  <a href="https://huggingface.co/meta-llama/Meta-Llama-3.1-405B-Instruct">Meta-Llama-3.1-405B-Instruct</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct">Meta-Llama-3.1-70B-Instruct</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct">Meta-Llama-3.1-8B-Instruct</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct">Meta-Llama-3-70B-Instruct</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct">Meta-Llama-3-8B-Instruct</a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">Gemma</td>
+          <td align="center" valign="middle">✅</td>
+          <td>
+            🔥🔥🔥  <a href="https://huggingface.co/google/gemma-2-27b-it">gemma-2-27b-it</a><br>
+            🔥🔥🔥  <a href="https://huggingface.co/google/gemma-2-9b-it">gemma-2-9b-it</a><br>
+            🔥🔥🔥  <a href="https://huggingface.co/google/gemma-7b-it">gemma-7b-it</a><br>
+            🔥🔥🔥  <a href="https://huggingface.co/google/gemma-2b-it">gemma-2b-it</a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">Yi</td>
+          <td align="center" valign="middle">✅</td>
+          <td>
+            🔥🔥🔥  <a href="https://huggingface.co/01-ai/Yi-1.5-34B-Chat">Yi-1.5-34B-Chat</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/01-ai/Yi-1.5-9B-Chat">Yi-1.5-9B-Chat</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/01-ai/Yi-1.5-6B-Chat">Yi-1.5-6B-Chat</a><br/>
+            🔥🔥🔥  <a href="https://huggingface.co/01-ai/Yi-34B-Chat">Yi-34B-Chat</a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">Starling</td>
+          <td align="center" valign="middle">✅</td>
+          <td>
+            🔥🔥🔥  <a href="https://huggingface.co/Nexusflow/Starling-LM-7B-beta">Starling-LM-7B-beta</a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">SOLAR</td>
+          <td align="center" valign="middle">✅</td>
+          <td>
+            🔥🔥🔥  <a href="https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0">SOLAR-10.7B</a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">Mixtral</td>
+          <td align="center" valign="middle">✅</td>
+          <td>
+            🔥🔥🔥  <a href="https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1">Mixtral-8x7B</a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">Phi</td>
+          <td align="center" valign="middle">✅</td>
+          <td>
+            🔥🔥🔥  <a href="https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3">Phi-3</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
   - [More Supported LLMs](http://docs.gptdb.site/docs/modules/smmf)
 
 - **Privacy and Security**
@@ -221,8 +302,6 @@ At present, we have introduced several key features to showcase our current capa
 🌐 [AutoDL Image](https://www.codewithgpu.com/i/khulnasoft/GPT-DB/gptdb)
 
 
-### Language Switching
-    In the .env configuration file, modify the LANGUAGE parameter to switch to different languages. The default is English (Chinese: zh, English: en, other languages to be added later).
 
 ## Contribution
 
@@ -237,10 +316,13 @@ At present, we have introduced several key features to showcase our current capa
 ## Licence
 The MIT License (MIT)
 
-## Citation
-If you want to understand the overall architecture of GPT-DB, please cite <a href="https://arxiv.org/abs/2312.17449" target="_blank">paper</a> and <a href="https:// arxiv.org/abs/2404.10209" target="_blank">Paper</a>
+## DISCKAIMER
+- [disckaimer](./DISCKAIMER.md)
 
-If you want to learn about using GPT-DB for Agent development, please cite the <a href="https://arxiv.org/abs/2412.13520" target="_blank">paper</a>
+## Citation
+If you want to understand the overall architecture of GPT-DB, please cite <a href="https://arxiv.org/abs/2312.17449" target="_blank">Paper</a> and <a href="https://arxiv.org/abs/2404.10209" target="_blank">Paper</a>
+
+If you want to learn about using GPT-DB for Agent development, please cite the <a href="https://arxiv.org/abs/2412.13520" target="_blank">Paper</a>
 ```bibtex
 @article{xue2023gptdb,
       title={GPT-DB: Empowering Database Interactions with Private Large Language Models}, 
@@ -269,7 +351,12 @@ If you want to learn about using GPT-DB for Agent development, please cite the <
 
 
 ## Contact Information
-We are working on building a community, if you have any ideas for building the community, feel free to contact us.
-[![](https://dcbadge.vercel.app/api/server/7uQnPuveTY?compact=true&style=flat)](https://discord.gg/7uQnPuveTY)
+Thanks to everyone who has contributed to GPT-DB! Your ideas, code, comments, and even sharing them at events and on social platforms can make GPT-DB better.
+We are working on building a community, if you have any ideas for building the community, feel free to contact us.  
 
-[![Star History Chart](https://api.star-history.com/svg?repos=csunny/GPT-DB&type=Date)](https://star-history.com/#csunny/GPT-DB)
+- [Github Issues](https://github.com/khulnasoft/GPT-DB/issues) ⭐️：For questions about using GB-DPT, see the CONTRIBUTING.  
+- [Github Discussions](https://github.com/orgs/khulnasoft/discussions) ⭐️：Share your experience or unique apps.  
+- [Twitter](https://x.com/GPTDB_AI) ⭐️：Please feel free to talk to us.  
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=khulnasoft/GPT-DB&type=Date)](https://star-history.com/#khulnasoft/GPT-DB)

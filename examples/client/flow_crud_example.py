@@ -26,18 +26,23 @@ Example:
         res = await list_flow(client)
 
 """
+
 import asyncio
 
-from gptdb.client import Client
-from gptdb.client.flow import list_flow
+from gptdb_client import Client
+from gptdb_client.flow import list_flow
 
 
 async def main():
     # initialize client
     GPTDB_API_KEY = "gptdb"
     client = Client(api_key=GPTDB_API_KEY)
-    res = await list_flow(client)
-    print(res)
+    try:
+        res = await list_flow(client)
+        print(res)
+    finally:
+        # explicitly close client to avoid event loop closed error
+        await client.aclose()
 
 
 if __name__ == "__main__":

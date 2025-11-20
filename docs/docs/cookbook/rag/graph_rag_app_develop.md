@@ -10,7 +10,12 @@ You can refer to the python example file `GPT-DB/examples/rag/graph_rag_example.
 First, you need to install the `gptdb` library.
 
 ```bash
-pip install "gptdb[graph_rag]>=0.6.1"
+uv sync --all-packages --frozen \
+--extra "proxy_openai" \
+--extra "rag" \
+--extra "storage_chromadb" \
+--extra "gptdbs"
+--extra "graph_rag"
 ````
 
 ### Prepare Graph Database
@@ -52,11 +57,7 @@ import TabItem from '@theme/TabItem';
   ]}>
   <TabItem value="openai">
 
-First, you should install the `openai` library. 
 
-```bash
-pip install openai
-```
 Then set your API key in the environment `OPENAI_API_KEY`.
 
 ```python
@@ -70,19 +71,9 @@ llm_client = OpenAILLMClient()
 
 You should have a YI account and get the API key from the YI official website.
 
-First, you should install the `openai` library.
-
-```bash
-pip install openai
-```
 
 Then set your API key in the environment variable `YI_API_KEY`.
 
-```python
-from gptdb.model.proxy import YiLLMClient
-
-llm_client = YiLLMClient()
-```
   </TabItem>
 
   <TabItem value="model_service">
@@ -169,9 +160,9 @@ import os
 
 from gptdb.configs.model_config import ROOT_PATH
 from gptdb.core import Chunk, HumanPromptTemplate, ModelMessage, ModelRequest
-from gptdb.rag import ChunkParameters
-from gptdb.rag.assembler import EmbeddingAssembler
-from gptdb.rag.knowledge import KnowledgeFactory
+from gptdb_ext.rag import ChunkParameters
+from gptdb_ext.rag.assembler import EmbeddingAssembler
+from gptdb_ext.rag.knowledge import KnowledgeFactory
 from gptdb.rag.retriever import RetrieverStrategy
 
 async def test_community_graph_rag():

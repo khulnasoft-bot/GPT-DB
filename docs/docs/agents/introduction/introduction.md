@@ -20,7 +20,7 @@ a simple way, only a little change to the code when you need to deploy your agen
 
 Firstly, you need to install the `gptdb` package with the following command:
 ```bash
-pip install "gptdb[agent]>=0.5.9rc0"
+pip install "gptdb[agent,simple_framework]>=0.7.0" "gptdb_ext>=0.7.0"
 ```
 
 Then, you can install the `openai` package with the following command:
@@ -81,6 +81,9 @@ async def main():
         .bind(agent_memory)
         .build()
     )
+    
+    # Initialize GptsMemory
+    agent_memory.gpts_memory.init(conv_id="test123")
 
     # Create a user proxy agent
     user_proxy = await UserProxyAgent().bind(context).bind(agent_memory).build()
@@ -92,7 +95,7 @@ async def main():
         message="Calculate the result of 321 * 123",
     )
     # Obtain conversation history messages between agents
-    print(await agent_memory.gpts_memory.one_chat_completions("test123"))
+    print(await agent_memory.gpts_memory.app_link_chat_message("test123"))
 
 
 if __name__ == "__main__":

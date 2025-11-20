@@ -26,7 +26,7 @@ If you want to use OceanBase, please first start a docker container via the foll
 docker run --name=ob433 -e MODE=slim -p 2881:2881 -d quay.io/oceanbase/oceanbase-ce:4.3.3.0-100000142024101215
 ```
 
-Donwload the partner package:
+Download the partner package:
 ```shell
 pip install --upgrade --quiet pyobvector
 ```
@@ -53,7 +53,7 @@ OB_DATABASE=test
 ## Optional: If {OB_ENABLE_NORMALIZE_VECTOR} is set, the vector stored in OceanBase is normalized.
 # OB_ENABLE_NORMALIZE_VECTOR=True
 ```
-If you want to support more vector db, you can integrate yourself.[how to integrate](https://db-gpt.readthedocs.io/en/latest/modules/vector.html)
+If you want to support more vector db, you can integrate yourself.[how to integrate](https://gpt-db.readthedocs.io/en/latest/modules/vector.html)
 ```commandline
 #*******************************************************************#
 #**                  VECTOR STORE SETTINGS                       **#

@@ -21,7 +21,7 @@ Please replace `<YOUR-GITHUB-USERNAME>` with your GitHub username.
 
 1. Create a new virtual environment using the following command:
 ```
-# Ensure python >= 3.10
+# Make sure python >= 3.10
 conda create -n gptdb_env python=3.10
 conda activate gptdb_env
 ```
@@ -31,21 +31,66 @@ conda activate gptdb_env
 cd GPT-DB
 ```
 
-3. Install the project from the local source using the following command:
-```
-# it will take some minutes
-pip install -e ".[default]"
+3. Install uv package manager:
+
+There are several ways to install uv:
+
+**Option 1: Using pipx (Recommended)**
+```bash
+python -m pip install --upgrade pip
+python -m pip install --upgrade pipx
+python -m pipx ensurepath
+pipx install uv
 ```
 
-4. Install development requirements
+**Option 2: Using curl (macOS/Linux)**
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
-pip install -r requirements/dev-requirements.txt
-pip install -r requirements/lint-requirements.txt
+
+Then verify uv installation:
+```bash
+uv --version
+```
+
+4. Install the project and all dependencies using uv:
+```bash
+# This will install all packages and development dependencies
+# it will take some minutes
+uv sync --all-packages \
+--extra "base" \
+--extra "proxy_openai" \
+--extra "rag" \
+--extra "storage_chromadb" \
+--extra "gptdbs"
+```
+
+**Note for users in China:** If you encounter network issues, you can configure uv to use Chinese mirrors:
+```bash
+# Set environment variable for Tsinghua mirror
+export UV_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+
+# Or add --index-url parameter to the sync command
+uv sync --all-packages \
+--extra "base" \
+--extra "proxy_openai" \
+--extra "rag" \
+--extra "storage_chromadb" \
+--extra "gptdbs" \
+--index-url=https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 5. Install pre-commit hooks
 ```
-pre-commit install
+uv run pre-commit install
+```
+
+**Important Note:** After using `uv sync`, you should use `uv run` to execute commands in the virtual environment, or you can activate the environment with:
+```bash
+# Activate the virtual environment
+source .venv/bin/activate  # On macOS/Linux
+# or
+.venv\Scripts\activate     # On Windows
 ```
 
 6. Install `make` command
@@ -118,3 +163,6 @@ Write necessary information about your changes and click "Create pull request".
 
 That's it you made it 🐣⭐⭐
 
+# Developing inside a Container
+
+If you are using VS Code as your IDE for development, you can refer to the [configuration here](.devcontainer/README.md) to set up the Dev Containers development environment.

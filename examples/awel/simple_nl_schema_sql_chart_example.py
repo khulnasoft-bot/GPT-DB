@@ -8,19 +8,19 @@ from gptdb.configs.model_config import MODEL_PATH, PILOT_PATH
 from gptdb.core import LLMClient, ModelMessage, ModelMessageRoleType, ModelRequest
 from gptdb.core.awel import DAG, HttpTrigger, JoinOperator, MapOperator
 from gptdb.datasource.rdbms.base import RDBMSConnector
-from gptdb.datasource.rdbms.conn_sqlite import SQLiteTempConnector
 from gptdb.model.proxy import OpenAILLMClient
 from gptdb.rag.embedding import DefaultEmbeddingFactory
-from gptdb.rag.operators.schema_linking import SchemaLinkingOperator
-from gptdb.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
 from gptdb.util.chat_util import run_async_tasks
+from gptdb_ext.datasource.rdbms.conn_sqlite import SQLiteTempConnector
+from gptdb_ext.rag.operators.schema_linking import SchemaLinkingOperator
+from gptdb_ext.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
 
 """AWEL: Simple nl-schemalinking-sql-chart operator example
 
     pre-requirements:
         1. install openai python sdk
         ```
-            pip install "db-gpt[openai]"
+            pip install "gpt-db[openai]"
         ```
         2. set openai key and base
         ```
@@ -51,15 +51,15 @@ INPUT_PROMPT = "\n###Input:\n{}\n###Response:"
 
 def _create_vector_connector():
     """Create vector connector."""
-    config = ChromaVectorConfig(
-        persist_path=PILOT_PATH,
+    config = ChromaVectorConfig(persist_path=PILOT_PATH)
+
+    return ChromaStore(
+        config,
         name="embedding_rag_test",
         embedding_fn=DefaultEmbeddingFactory(
             default_model_name=os.path.join(MODEL_PATH, "text2vec-large-chinese"),
         ).create(),
     )
-
-    return ChromaStore(config)
 
 
 def _create_temporary_connection():
@@ -232,7 +232,7 @@ with DAG("simple_nl_schema_sql_chart_example") as dag:
     )
     request_handle_task = RequestHandleOperator()
     query_operator = MapOperator(lambda request: request["query"])
-    llm = OpenAILLMClient()
+    llm = (OpenAILLMClient(api_key=os.getenv("OPENAI_API_KEY", "your api key")),)
     model_name = "gpt-3.5-turbo"
     retriever_task = SchemaLinkingOperator(
         connector=_create_temporary_connection(), llm=llm, model_name=model_name

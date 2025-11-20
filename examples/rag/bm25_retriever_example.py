@@ -2,10 +2,10 @@ import asyncio
 import os
 
 from gptdb.configs.model_config import ROOT_PATH
-from gptdb.rag import ChunkParameters
-from gptdb.rag.assembler.bm25 import BM25Assembler
-from gptdb.rag.knowledge import KnowledgeFactory
-from gptdb.storage.vector_store.elastic_store import ElasticsearchVectorConfig
+from gptdb_ext.rag import ChunkParameters
+from gptdb_ext.rag.assembler.bm25 import BM25Assembler
+from gptdb_ext.rag.knowledge import KnowledgeFactory
+from gptdb_ext.storage.vector_store.elastic_store import ElasticsearchStoreConfig
 
 """Embedding rag example.
     pre-requirements:
@@ -19,8 +19,7 @@ from gptdb.storage.vector_store.elastic_store import ElasticsearchVectorConfig
 
 def _create_es_config():
     """Create vector connector."""
-    return ElasticsearchVectorConfig(
-        name="bm25_es_gptdb",
+    return ElasticsearchStoreConfig(
         uri="localhost",
         port="9200",
         user="elastic",

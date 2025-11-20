@@ -1,0 +1,57 @@
+[project]
+name = "gptdb-sandbox"
+version = "0.7.3"
+description = "A secure sandbox execution environment for GPT-DB Agent"
+authors = [
+    { name = "Md Sulaiman", email = "dev.sulaiman@icloud.com" }
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">= 3.10"
+dependencies = [
+    "psutil>=5.9.0",
+    "colorama>=0.4.4",
+    "docker>=6.0.0",
+    "fastapi>=0.68.0",
+    "uvicorn>=0.15.0",
+    "pydantic>=1.8.0",
+    "python-multipart>=0.0.5",
+    "selenium>=4.0.0",
+    "typing-extensions>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/khulnasoft/GPT-DB"
+Documentation = "http://docs.gptdb.cn/docs/overview"
+Repository = "https://github.com/khulnasoft/GPT-DB.git"
+Issues = "https://github.com/khulnasoft/GPT-DB/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-asyncio>=0.18.0",
+    "black>=22.0",
+    "flake8>=4.0",
+]
+
+[tool.uv]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gptdb_sandbox"]
+exclude = [
+    "src/gptdb_sandbox/**/tests",
+    "src/gptdb_sandbox/**/tests/*",
+    "src/gptdb_sandbox/tests",
+    "src/gptdb_sandbox/tests/*",
+    "src/gptdb_sandbox/**/examples",
+    "src/gptdb_sandbox/**/examples/*"
+]
+
+[project.scripts]
+gptdb-sandbox = "gptdb_sandbox.sandbox.main:main"

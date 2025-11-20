@@ -2,11 +2,11 @@ import asyncio
 import os
 
 from gptdb.configs.model_config import MODEL_PATH, PILOT_PATH, ROOT_PATH
-from gptdb.rag import ChunkParameters
-from gptdb.rag.assembler import EmbeddingAssembler
 from gptdb.rag.embedding import DefaultEmbeddingFactory
-from gptdb.rag.knowledge import KnowledgeFactory
-from gptdb.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
+from gptdb_ext.rag import ChunkParameters
+from gptdb_ext.rag.assembler import EmbeddingAssembler
+from gptdb_ext.rag.knowledge import KnowledgeFactory
+from gptdb_ext.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
 
 """Embedding rag example.
     pre-requirements:
@@ -25,13 +25,15 @@ def _create_vector_connector():
     """Create vector connector."""
     config = ChromaVectorConfig(
         persist_path=PILOT_PATH,
+    )
+
+    return ChromaStore(
+        config,
         name="embedding_rag_test",
         embedding_fn=DefaultEmbeddingFactory(
             default_model_name=os.path.join(MODEL_PATH, "text2vec-large-chinese"),
         ).create(),
     )
-
-    return ChromaStore(config)
 
 
 async def main():

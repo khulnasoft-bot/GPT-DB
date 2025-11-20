@@ -1,11 +1,10 @@
 import os
 
 from gptdb.configs.model_config import MODEL_PATH, PILOT_PATH
-from gptdb.datasource.rdbms.conn_sqlite import SQLiteTempConnector
-from gptdb.rag.assembler import DBSchemaAssembler
 from gptdb.rag.embedding import DefaultEmbeddingFactory
-from gptdb.serve.rag.connector import VectorStoreConnector
-from gptdb.storage.vector_store.chroma_store import ChromaVectorConfig
+from gptdb_ext.datasource.rdbms.conn_sqlite import SQLiteTempConnector
+from gptdb_ext.rag.assembler import DBSchemaAssembler
+from gptdb_ext.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
 
 """DB struct rag example.
     pre-requirements:
@@ -46,12 +45,12 @@ def _create_temporary_connection():
 
 def _create_vector_connector():
     """Create vector connector."""
-    return VectorStoreConnector.from_default(
-        "Chroma",
-        vector_store_config=ChromaVectorConfig(
-            name="db_schema_vector_store_name",
-            persist_path=os.path.join(PILOT_PATH, "data"),
-        ),
+    config = ChromaVectorConfig(
+        persist_path=PILOT_PATH,
+    )
+    return ChromaStore(
+        config,
+        name="embedding_rag_test",
         embedding_fn=DefaultEmbeddingFactory(
             default_model_name=os.path.join(MODEL_PATH, "text2vec-large-chinese"),
         ).create(),

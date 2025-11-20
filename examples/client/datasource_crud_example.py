@@ -44,18 +44,23 @@ Example:
         res = await list_datasource(client)
 
 """
+
 import asyncio
 
-from gptdb.client import Client
-from gptdb.client.datasource import list_datasource
+from gptdb_client import Client
+from gptdb_client.datasource import list_datasource
 
 
 async def main():
     # initialize client
     GPTDB_API_KEY = "gptdb"
     client = Client(api_key=GPTDB_API_KEY)
-    res = await list_datasource(client)
-    print(res)
+    try:
+        res = await list_datasource(client)
+        print(res)
+    finally:
+        # explicitly close client to avoid event loop closed error
+        await client.aclose()
 
 
 if __name__ == "__main__":

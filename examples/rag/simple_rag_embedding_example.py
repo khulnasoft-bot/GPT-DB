@@ -14,29 +14,28 @@
 import os
 from typing import Dict, List
 
-from gptdb._private.config import Config
 from gptdb._private.pydantic import BaseModel, Field
-from gptdb.configs.model_config import EMBEDDING_MODEL_CONFIG, MODEL_PATH, PILOT_PATH
+from gptdb.configs.model_config import MODEL_PATH, PILOT_PATH
 from gptdb.core.awel import DAG, HttpTrigger, MapOperator
 from gptdb.rag.embedding import DefaultEmbeddingFactory
 from gptdb.rag.knowledge import KnowledgeType
-from gptdb.rag.operators import EmbeddingAssemblerOperator, KnowledgeOperator
-from gptdb.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
-
-CFG = Config()
+from gptdb_ext.rag.operators import EmbeddingAssemblerOperator, KnowledgeOperator
+from gptdb_ext.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
 
 
 def _create_vector_connector():
     """Create vector connector."""
     config = ChromaVectorConfig(
         persist_path=PILOT_PATH,
+    )
+
+    return ChromaStore(
+        config,
         name="embedding_rag_test",
         embedding_fn=DefaultEmbeddingFactory(
             default_model_name=os.path.join(MODEL_PATH, "text2vec-large-chinese"),
         ).create(),
     )
-
-    return ChromaStore(config)
 
 
 class TriggerReqBody(BaseModel):
