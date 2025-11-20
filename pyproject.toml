@@ -5,7 +5,9 @@ description = """GPT-DB is an experimental open-source project that uses localiz
 large models to interact with your data and environment. With this solution, you can be\
  assured that there is no risk of data leakage, and your data is 100% private and secure.\
 """
-authors = [{ name = "khulnasoft", email = "info@khulnasoft.com" }]
+authors = [
+    { name = "Md Sulaiman", email = "dev.sulaiman@icloud.com" }
+]
 dependencies = []
 readme = "README.md"
 requires-python = ">= 3.10"
@@ -28,13 +30,13 @@ explicit = true
 
 [tool.uv.workspace]
 members = [
-    "packages/gptdb-app",
-    "packages/gptdb-client",
-    "packages/gptdb-core",
-    "packages/gptdb-ext",
-    "packages/gptdb-serve",
-    "packages/gptdb-sandbox",
-    "packages/gptdb-accelerator/gptdb-acc*",
+  "packages/gptdb-app",
+  "packages/gptdb-client",
+  "packages/gptdb-core",
+  "packages/gptdb-ext",
+  "packages/gptdb-serve",
+  "packages/gptdb-sandbox",
+  "packages/gptdb-accelerator/gptdb-acc*",
 ]
 
 [tool.uv]
@@ -60,7 +62,7 @@ dev-dependencies = [
 
 [tool.pytest.ini_options]
 pythonpath = ["packages"]
-addopts = ["--import-mode=importlib"]
+addopts = ["--import-mode=importlib", ]
 python_files = ["test_*.py", "*_test.py"]
 
 [tool.ruff]
@@ -80,12 +82,4 @@ select = ["E", "F", "I"]
 
 [tool.ruff.lint.isort]
 # Specify the local modules (first-party)
-known-first-party = [
-    "gptdb",
-    "gptdb_acc_auto",
-    "gptdb_client",
-    "gptdb_ext",
-    "gptdb_serve",
-    "gptdb_app",
-    "gptdb_sandbox",
-]
+known-first-party = ["gptdb", "gptdb_acc_auto", "gptdb_client", "gptdb_ext", "gptdb_serve", "gptdb_app", "gptdb_sandbox"]

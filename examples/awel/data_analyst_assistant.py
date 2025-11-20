@@ -71,7 +71,7 @@ from gptdb.model.operators import (
     OpenAIStreamingOutputOperator,
     StreamingLLMOperator,
 )
-from gptdb.serve.conversation.operators import ServePreChatHistoryLoadOperator
+from gptdb_serve.conversation.operators import ServePreChatHistoryLoadOperator
 
 logger = logging.getLogger(__name__)
 
@@ -243,8 +243,8 @@ class PromptTemplateBuilderOperator(MapOperator[TriggerReqBody, ChatPromptTempla
         self._default_prompt_manager = PromptManager()
 
     async def map(self, input_value: TriggerReqBody) -> ChatPromptTemplate:
-        from gptdb.serve.prompt.serve import SERVE_APP_NAME as PROMPT_SERVE_APP_NAME
-        from gptdb.serve.prompt.serve import Serve as PromptServe
+        from gptdb_serve.prompt.serve import SERVE_APP_NAME as PROMPT_SERVE_APP_NAME
+        from gptdb_serve.prompt.serve import Serve as PromptServe
 
         prompt_serve = self.system_app.get_component(
             PROMPT_SERVE_APP_NAME, PromptServe, default_component=None

@@ -25,30 +25,30 @@
 import os
 from typing import Dict, List
 
-from gptdb._private.config import Config
 from gptdb._private.pydantic import BaseModel, Field
 from gptdb.configs.model_config import MODEL_PATH, PILOT_PATH
 from gptdb.core import Chunk
 from gptdb.core.awel import DAG, HttpTrigger, JoinOperator, MapOperator
-from gptdb.datasource.rdbms.conn_sqlite import SQLiteTempConnector
 from gptdb.rag.embedding import DefaultEmbeddingFactory
-from gptdb.rag.operators import DBSchemaAssemblerOperator, DBSchemaRetrieverOperator
-from gptdb.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
-
-CFG = Config()
+from gptdb_ext.datasource.rdbms.conn_sqlite import SQLiteTempConnector
+from gptdb_ext.rag.operators import DBSchemaAssemblerOperator
+from gptdb_ext.rag.operators.db_schema import DBSchemaRetrieverOperator
+from gptdb_ext.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
 
 
 def _create_vector_connector():
     """Create vector connector."""
     config = ChromaVectorConfig(
-        persist_path=os.path.join(PILOT_PATH, "data"),
-        name="vector_name",
+        persist_path=PILOT_PATH,
+    )
+
+    return ChromaStore(
+        config,
+        name="embedding_rag_test",
         embedding_fn=DefaultEmbeddingFactory(
             default_model_name=os.path.join(MODEL_PATH, "text2vec-large-chinese"),
         ).create(),
     )
-
-    return ChromaStore(config)
 
 
 def _create_temporary_connection():

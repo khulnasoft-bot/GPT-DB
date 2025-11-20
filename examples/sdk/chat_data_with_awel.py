@@ -22,13 +22,14 @@ from gptdb.core.awel import (
 )
 from gptdb.core.operators import PromptBuilderOperator, RequestBuilderOperator
 from gptdb.datasource.operators import DatasourceOperator
-from gptdb.datasource.rdbms.conn_sqlite import SQLiteTempConnector
 from gptdb.model.operators import LLMOperator
 from gptdb.model.proxy import OpenAILLMClient
-from gptdb.rag import ChunkParameters
 from gptdb.rag.embedding import DefaultEmbeddingFactory
-from gptdb.rag.operators import DBSchemaAssemblerOperator, DBSchemaRetrieverOperator
-from gptdb.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
+from gptdb_ext.datasource.rdbms.conn_sqlite import SQLiteTempConnector
+from gptdb_ext.rag import ChunkParameters
+from gptdb_ext.rag.operators import DBSchemaAssemblerOperator
+from gptdb_ext.rag.operators.db_schema import DBSchemaRetrieverOperator
+from gptdb_ext.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
 
 # Delete old vector store directory(/tmp/awel_with_data_vector_store)
 shutil.rmtree("/tmp/awel_with_data_vector_store", ignore_errors=True)
@@ -59,12 +60,12 @@ db_conn.create_temp_tables(
     }
 )
 
-config = ChromaVectorConfig(
-    persist_path=PILOT_PATH,
+config = ChromaVectorConfig(persist_path=PILOT_PATH)
+vector_store = ChromaStore(
+    config,
     name="db_schema_vector_store",
     embedding_fn=embeddings,
 )
-vector_store = ChromaStore(config)
 
 antv_charts = [
     {"response_line_chart": "used to display comparative trend analysis data"},

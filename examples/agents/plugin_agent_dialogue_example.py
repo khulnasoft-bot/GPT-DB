@@ -1,17 +1,17 @@
 """Agents: single agents about CodeAssistantAgent?
 
-    Examples:
+Examples:
 
-        Execute the following command in the terminal:
-        Set env params.
-        .. code-block:: shell
+    Execute the following command in the terminal:
+    Set env params.
+    .. code-block:: shell
 
-            export SILICONFLOW_API_KEY=sk-xx
-            export SILICONFLOW_API_BASE=https://xx:80/v1
+        export SILICONFLOW_API_KEY=sk-xx
+        export SILICONFLOW_API_BASE=https://xx:80/v1
 
-        run example.
-        ..code-block:: shell
-            python examples/agents/plugin_agent_dialogue_example.py
+    run example.
+    ..code-block:: shell
+        python examples/agents/plugin_agent_dialogue_example.py
 """
 
 import asyncio

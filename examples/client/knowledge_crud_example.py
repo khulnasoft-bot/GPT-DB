@@ -65,9 +65,9 @@ Example:
 
 import asyncio
 
-from gptdb.client import Client
-from gptdb.client.knowledge import create_space
-from gptdb.client.schema import SpaceModel
+from gptdb_client import Client
+from gptdb_client.knowledge import create_space
+from gptdb_client.schema import SpaceModel
 
 
 async def main():
@@ -75,16 +75,20 @@ async def main():
     GPTDB_API_KEY = "gptdb"
     client = Client(api_key=GPTDB_API_KEY)
 
-    res = await create_space(
-        client,
-        SpaceModel(
-            name="test_space_1",
-            vector_type="Chroma",
-            desc="for client space desc",
-            owner="gptdb",
-        ),
-    )
-    print(res)
+    try:
+        res = await create_space(
+            client,
+            SpaceModel(
+                name="test_space_1",
+                vector_type="Chroma",
+                desc="for client space desc",
+                owner="gptdb",
+            ),
+        )
+        print(res)
+    finally:
+        # explicitly close client to avoid event loop closed error
+        await client.aclose()
 
     # list all spaces
     # res = await list_space(client)

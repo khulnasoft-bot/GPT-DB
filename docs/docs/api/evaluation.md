@@ -49,8 +49,8 @@ curl -X POST "http://localhost:5670/api/v2/serve/evaluate/evaluation"
 
 
 ```python
-from gptdb.client import Client
-from gptdb.client.evaluation import run_evaluation
+from gptdb_client import Client
+from gptdb_client.evaluation import run_evaluation
 from gptdb.serve.evaluate.api.schemas import EvaluateServeRequest
 
 GPTDB_API_KEY = "gptdb"

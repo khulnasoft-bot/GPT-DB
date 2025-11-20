@@ -97,4 +97,4 @@ This iteration is inseparable from the participation of developers and users in 
 
 
 ## Reference
-- [中文手册](https://www.yuque.com/khulnasoft/gptdb-docs/ym574wh2hddunfbd)
+- [中文手册](https://www.yuque.com/eosphoros/gptdb-docs/ym574wh2hddunfbd)

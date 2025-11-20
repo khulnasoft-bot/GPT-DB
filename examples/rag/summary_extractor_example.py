@@ -1,23 +1,23 @@
 """Summary extractor example.
-    pre-requirements:
-        1. install openai python sdk
-        ```
-            pip install openai
-        ```
-        2. set openai key and base
-        ```
-            export OPENAI_API_KEY={your_openai_key}
-            export OPENAI_API_BASE={your_openai_base}
-        ```
-        or
-        ```
-            import os
-            os.environ["OPENAI_API_KEY"] = {your_openai_key}
-            os.environ["OPENAI_API_BASE"] = {your_openai_base}
-        ```
-    Examples:
-        ..code-block:: shell
-            python examples/rag/summary_extractor_example.py
+pre-requirements:
+    1. install openai python sdk
+    ```
+        pip install openai
+    ```
+    2. set openai key and base
+    ```
+        export OPENAI_API_KEY={your_openai_key}
+        export OPENAI_API_BASE={your_openai_base}
+    ```
+    or
+    ```
+        import os
+        os.environ["OPENAI_API_KEY"] = {your_openai_key}
+        os.environ["OPENAI_API_BASE"] = {your_openai_base}
+    ```
+Examples:
+    ..code-block:: shell
+        python examples/rag/summary_extractor_example.py
 """
 
 import asyncio
@@ -25,9 +25,9 @@ import os
 
 from gptdb.configs.model_config import ROOT_PATH
 from gptdb.model.proxy import OpenAILLMClient
-from gptdb.rag import ChunkParameters
-from gptdb.rag.assembler import SummaryAssembler
-from gptdb.rag.knowledge import KnowledgeFactory
+from gptdb_ext.rag import ChunkParameters
+from gptdb_ext.rag.assembler import SummaryAssembler
+from gptdb_ext.rag.knowledge import KnowledgeFactory
 
 
 async def main():

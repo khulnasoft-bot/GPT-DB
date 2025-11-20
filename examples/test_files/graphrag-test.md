@@ -9,7 +9,7 @@
 
 ---
 
-- 🔥🔥🔥 [V0.5.0发布——通过工作流与智能体开发原生数据应用](https://www.yuque.com/khulnasoft/gptdb-docs/owcrh9423f9rqkg2)
+- 🔥🔥🔥 [V0.5.0发布——通过工作流与智能体开发原生数据应用](https://www.yuque.com/eosphoros/gptdb-docs/owcrh9423f9rqkg2)
 
 ---
 
@@ -72,41 +72,41 @@ Agent的核心模块主要有Memory、Profile、Planing、Action等模块。
 SMMF由模型推理层、模型部署层两部分组成。模型推理层对应模型推理框架vLLM、TGI和TensorRT等。模型部署层向下对接推理层，向上提供模型服务能力。 模型部署框架在推理框架之上，提供了多模型实例、多推理框架、多云、自动扩缩容与可观测性等能力。
 ### 子模块
 
-- [GPT-DB-Hub](https://github.com/khulnasoft-lab/GPT-DB-Hub) 通过微调来持续提升Text2SQL效果 
-- [GPT-DB-Plugins](https://github.com/khulnasoft-lab/GPT-DB-Plugins) GPT-DB 插件仓库, 兼容Auto-GPT
-- [GPT-Vis](https://github.com/khulnasoft-lab/GPT-DB-Web) 可视化协议 
-- [gptdbs](https://github.com/khulnasoft-lab/gptdbs)  gptdbs 是官方提供的数据应用仓库, 包含数据智能应用, 智能体编排流程模版, 通用算子等构建在GPT-DB之上的资源。
+- [GPT-DB-Hub](https://github.com/khulnasoft/GPT-DB-Hub) 通过微调来持续提升Text2SQL效果 
+- [GPT-DB-Plugins](https://github.com/khulnasoft/GPT-DB-Plugins) GPT-DB 插件仓库, 兼容Auto-GPT
+- [GPT-Vis](https://github.com/khulnasoft/GPT-DB-Web) 可视化协议 
+- [gptdbs](https://github.com/khulnasoft/gptdbs)  gptdbs 是官方提供的数据应用仓库, 包含数据智能应用, 智能体编排流程模版, 通用算子等构建在GPT-DB之上的资源。
 ## 安装
-[**教程**](https://www.yuque.com/khulnasoft/gptdb-docs/bex30nsv60ru0fmx)
+[**教程**](https://www.yuque.com/eosphoros/gptdb-docs/bex30nsv60ru0fmx)
 
-- [**快速开始**](https://www.yuque.com/khulnasoft/gptdb-docs/ew0kf1plm0bru2ga)
-   - [源码安装](https://www.yuque.com/khulnasoft/gptdb-docs/urh3fcx8tu0s9xmb)
-   - [Docker安装](https://www.yuque.com/khulnasoft/gptdb-docs/glf87qg4xxcyrp89)
-   - [Docker Compose安装](https://www.yuque.com/khulnasoft/gptdb-docs/wwdu11e0v5nkfzin)
-- [**使用手册**](https://www.yuque.com/khulnasoft/gptdb-docs/tkspdd0tcy2vlnu4)
-   - [知识库](https://www.yuque.com/khulnasoft/gptdb-docs/ycyz3d9b62fccqxh)
-   - [数据对话](https://www.yuque.com/khulnasoft/gptdb-docs/gd9hbhi1dextqgbz)
-   - [Excel对话](https://www.yuque.com/khulnasoft/gptdb-docs/prugoype0xd2g4bb)
-   - [数据库对话](https://www.yuque.com/khulnasoft/gptdb-docs/wswpv3zcm2c9snmg)
-   - [报表分析](https://www.yuque.com/khulnasoft/gptdb-docs/vsv49p33eg4p5xc1)
-   - [Agents](https://www.yuque.com/khulnasoft/gptdb-docs/pom41m7oqtdd57hm)
-- [**进阶教程**](https://www.yuque.com/khulnasoft/gptdb-docs/dxalqb8wsv2xkm5f)
-   - [智能体工作流使用](https://www.yuque.com/khulnasoft/gptdb-docs/hcomfb3yrleg7gmq)
-   - [智能应用使用](https://www.yuque.com/khulnasoft/gptdb-docs/aiagvxeb86iarq6r)
-   - [多模型管理](https://www.yuque.com/khulnasoft/gptdb-docs/huzgcf2abzvqy8uv)
-   - [命令行使用](https://www.yuque.com/khulnasoft/gptdb-docs/gd4kgumgd004aly8)
-- [**模型服务部署**](https://www.yuque.com/khulnasoft/gptdb-docs/vubxiv9cqed5mc6o)
-   - [单机部署](https://www.yuque.com/khulnasoft/gptdb-docs/kwg1ed88lu5fgawb)
-   - [集群部署](https://www.yuque.com/khulnasoft/gptdb-docs/gmbp9619ytyn2v1s)
-   - [vLLM](https://www.yuque.com/khulnasoft/gptdb-docs/bhy9igdvanx1uluf)
-- [**如何Debug**](https://www.yuque.com/khulnasoft/gptdb-docs/eyg0ocbc2ce3q95r)
-- [**AWEL**](https://www.yuque.com/khulnasoft/gptdb-docs/zozbzslbfk0m0op5)
-- [**FAQ**](https://www.yuque.com/khulnasoft/gptdb-docs/gomtc46qonmyt44l)
+- [**快速开始**](https://www.yuque.com/eosphoros/gptdb-docs/ew0kf1plm0bru2ga)
+   - [源码安装](https://www.yuque.com/eosphoros/gptdb-docs/urh3fcx8tu0s9xmb)
+   - [Docker安装](https://www.yuque.com/eosphoros/gptdb-docs/glf87qg4xxcyrp89)
+   - [Docker Compose安装](https://www.yuque.com/eosphoros/gptdb-docs/wwdu11e0v5nkfzin)
+- [**使用手册**](https://www.yuque.com/eosphoros/gptdb-docs/tkspdd0tcy2vlnu4)
+   - [知识库](https://www.yuque.com/eosphoros/gptdb-docs/ycyz3d9b62fccqxh)
+   - [数据对话](https://www.yuque.com/eosphoros/gptdb-docs/gd9hbhi1dextqgbz)
+   - [Excel对话](https://www.yuque.com/eosphoros/gptdb-docs/prugoype0xd2g4bb)
+   - [数据库对话](https://www.yuque.com/eosphoros/gptdb-docs/wswpv3zcm2c9snmg)
+   - [报表分析](https://www.yuque.com/eosphoros/gptdb-docs/vsv49p33eg4p5xc1)
+   - [Agents](https://www.yuque.com/eosphoros/gptdb-docs/pom41m7oqtdd57hm)
+- [**进阶教程**](https://www.yuque.com/eosphoros/gptdb-docs/dxalqb8wsv2xkm5f)
+   - [智能体工作流使用](https://www.yuque.com/eosphoros/gptdb-docs/hcomfb3yrleg7gmq)
+   - [智能应用使用](https://www.yuque.com/eosphoros/gptdb-docs/aiagvxeb86iarq6r)
+   - [多模型管理](https://www.yuque.com/eosphoros/gptdb-docs/huzgcf2abzvqy8uv)
+   - [命令行使用](https://www.yuque.com/eosphoros/gptdb-docs/gd4kgumgd004aly8)
+- [**模型服务部署**](https://www.yuque.com/eosphoros/gptdb-docs/vubxiv9cqed5mc6o)
+   - [单机部署](https://www.yuque.com/eosphoros/gptdb-docs/kwg1ed88lu5fgawb)
+   - [集群部署](https://www.yuque.com/eosphoros/gptdb-docs/gmbp9619ytyn2v1s)
+   - [vLLM](https://www.yuque.com/eosphoros/gptdb-docs/bhy9igdvanx1uluf)
+- [**如何Debug**](https://www.yuque.com/eosphoros/gptdb-docs/eyg0ocbc2ce3q95r)
+- [**AWEL**](https://www.yuque.com/eosphoros/gptdb-docs/zozbzslbfk0m0op5)
+- [**FAQ**](https://www.yuque.com/eosphoros/gptdb-docs/gomtc46qonmyt44l)
 ## 特性一览
 
 - **私域问答&数据处理&RAG**支持内置、多文件格式上传、插件自抓取等方式自定义构建知识库，对海量结构化，非结构化数据做统一向量存储与检索
 - **多数据源&GBI**支持自然语言与Excel、数据库、数仓等多种数据源交互，并支持分析报告。
-- **自动化微调**围绕大语言模型、Text2SQL数据集、LoRA/QLoRA/Pturning等微调方法构建的自动化微调轻量框架, 让TextSQL微调像流水线一样方便。详见: [GPT-DB-Hub](https://github.com/khulnasoft-lab/GPT-DB-Hub)
+- **自动化微调**围绕大语言模型、Text2SQL数据集、LoRA/QLoRA/Pturning等微调方法构建的自动化微调轻量框架, 让TextSQL微调像流水线一样方便。详见: [GPT-DB-Hub](https://github.com/khulnasoft/GPT-DB-Hub)
 - **数据驱动的Agents插件**支持自定义插件执行任务，原生支持Auto-GPT插件模型，Agents协议采用Agent Protocol标准
 - **多模型支持与管理**海量模型支持，包括开源、API代理等几十种大语言模型。如LLaMA/LLaMA2、Baichuan、ChatGLM、文心、通义、智谱等。当前已支持如下模型: 
    - 新增支持模型
@@ -141,7 +141,7 @@ SMMF由模型推理层、模型部署层两部分组成。模型推理层对应�
       - 🔥🔥🔥  [Mixtral-8x7B](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1)
       - 🔥🔥🔥  [Qwen-72B-Chat](https://huggingface.co/Qwen/Qwen-72B-Chat)
       - 🔥🔥🔥  [Yi-34B-Chat](https://huggingface.co/01-ai/Yi-34B-Chat)
-   - [更多开源模型](https://www.yuque.com/khulnasoft/gptdb-docs/iqaaqwriwhp6zslc#qQktR)
+   - [更多开源模型](https://www.yuque.com/eosphoros/gptdb-docs/iqaaqwriwhp6zslc#qQktR)
    - 支持在线代理模型
 - [x] [DeepSeek.deepseek-chat](https://platform.deepseek.com/api-docs/)
 - [x] [Ollama.API](https://github.com/ollama/ollama/blob/main/docs/api.md)
@@ -156,17 +156,17 @@ SMMF由模型推理层、模型部署层两部分组成。模型推理层对应�
 - [x] [Google·Bard](https://bard.google.com/)
 - [x] [Google·Gemini](https://makersuite.google.com/app/apikey)
 - **隐私安全**通过私有化大模型、代理脱敏等多种技术保障数据的隐私安全。
-- [支持数据源](https://www.yuque.com/khulnasoft/gptdb-docs/rc4r27ybmdwg9472)
+- [支持数据源](https://www.yuque.com/eosphoros/gptdb-docs/rc4r27ybmdwg9472)
 ## Image
 🌐 [AutoDL镜像](https://www.codewithgpu.com/i/khulnasoft/GPT-DB/gptdb)
-🌐 [小程序云部署](https://www.yuque.com/khulnasoft/gptdb-docs/ek12ly8k661tbyn8)
+🌐 [小程序云部署](https://www.yuque.com/eosphoros/gptdb-docs/ek12ly8k661tbyn8)
 ### 多语言切换
 在.env 配置文件当中，修改LANGUAGE参数来切换使用不同的语言，默认是英文(中文zh, 英文en, 其他语言待补充)
 ## 使用说明
 ### 多模型使用
 ### 数据Agents使用
 
-- [数据Agents](https://www.yuque.com/khulnasoft/gptdb-docs/gwz4rayfuwz78fbq)
+- [数据Agents](https://www.yuque.com/eosphoros/gptdb-docs/gwz4rayfuwz78fbq)
 ## 贡献
 ## 更加详细的贡献指南请参考[如何贡献](https://github.com/khulnasoft/GPT-DB/blob/main/CONTRIBUTING.md)。
 这是一个用于数据库的复杂且创新的工具, 我们的项目也在紧急的开发当中, 会陆续发布一些新的feature。如在使用当中有任何具体问题, 优先在项目下提issue, 如有需要, 请联系如下微信，我会尽力提供帮助，同时也非常欢迎大家参与到项目建设中。
@@ -487,7 +487,7 @@ Entities:
 (hiyouga/LLaMA-Factory#github_repo)
 (lm-sys/FastChat#github_repo)
 (langchain-ai/langchain#github_repo)
-(khulnasoft-lab/GPT-DB-Hub#github_repo)
+(khulnasoft/GPT-DB-Hub#github_repo)
 (THUDM/ChatGLM-6B#github_repo)
 (langgenius/dify#github_repo)
 (vllm-project/vllm#github_repo)
@@ -508,7 +508,7 @@ Relationships:
 (khulnasoft/GPT-DB#common_developer#hiyouga/LLaMA-Factory#common_developer count 45)
 (khulnasoft/GPT-DB#common_developer#lm-sys/FastChat#common_developer count 39)
 (khulnasoft/GPT-DB#common_developer#langchain-ai/langchain#common_developer count 37)
-(khulnasoft/GPT-DB#common_developer#khulnasoft-lab/GPT-DB-Hub#common_developer count 37)
+(khulnasoft/GPT-DB#common_developer#khulnasoft/GPT-DB-Hub#common_developer count 37)
 (khulnasoft/GPT-DB#common_developer#THUDM/ChatGLM-6B#common_developer count 31)
 (khulnasoft/GPT-DB#common_developer#langgenius/dify#common_developer count 30)
 (khulnasoft/GPT-DB#common_developer#vllm-project/vllm#common_developer count 27)
@@ -516,7 +516,7 @@ Relationships:
 (khulnasoft/GPT-DB#common_developer#PaddlePaddle/PaddleOCR#common_developer count 24)
 (vllm-project/vllm#belong_to#vllm-project#belong_to)
 (khulnasoft/GPT-DB#belong_to#khulnasoft#belong_to)
-(khulnasoft-lab/GPT-DB-Hub#belong_to#khulnasoft#belong_to)
+(khulnasoft/GPT-DB-Hub#belong_to#khulnasoft#belong_to)
 (PaddlePaddle/PaddleOCR#belong_to#PaddlePaddle#belong_to)
 (QwenLM/Qwen#belong_to#QwenLM#belong_to)
 (THUDM/ChatGLM-6B#belong_to#THUDM#belong_to)

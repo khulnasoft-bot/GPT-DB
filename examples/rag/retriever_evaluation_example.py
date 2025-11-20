@@ -4,8 +4,6 @@ from typing import Optional
 
 from gptdb.configs.model_config import MODEL_PATH, PILOT_PATH, ROOT_PATH
 from gptdb.core import Embeddings
-from gptdb.rag import ChunkParameters
-from gptdb.rag.assembler import EmbeddingAssembler
 from gptdb.rag.embedding import DefaultEmbeddingFactory
 from gptdb.rag.evaluation import RetrieverEvaluator
 from gptdb.rag.evaluation.retriever import (
@@ -13,9 +11,11 @@ from gptdb.rag.evaluation.retriever import (
     RetrieverMRRMetric,
     RetrieverSimilarityMetric,
 )
-from gptdb.rag.knowledge import KnowledgeFactory
-from gptdb.rag.operators import EmbeddingRetrieverOperator
-from gptdb.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
+from gptdb_ext.rag import ChunkParameters
+from gptdb_ext.rag.assembler import EmbeddingAssembler
+from gptdb_ext.rag.knowledge import KnowledgeFactory
+from gptdb_ext.rag.operators import EmbeddingRetrieverOperator
+from gptdb_ext.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
 
 
 def _create_embeddings(
@@ -27,15 +27,17 @@ def _create_embeddings(
     ).create()
 
 
-def _create_vector_connector(embeddings: Embeddings):
+def _create_vector_connector():
     """Create vector connector."""
     config = ChromaVectorConfig(
         persist_path=PILOT_PATH,
-        name="embedding_rag_test",
-        embedding_fn=embeddings,
     )
 
-    return ChromaStore(config)
+    return ChromaStore(
+        config,
+        name="embedding_rag_test",
+        embedding_fn=_create_embeddings(),
+    )
 
 
 async def main():

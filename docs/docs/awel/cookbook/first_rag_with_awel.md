@@ -11,7 +11,7 @@ In this example, we will load your knowledge from a URL and store it in a vector
 First, you need to install the `gptdb` library.
 
 ```bash
-pip install "gptdb[rag]>=0.5.2"
+pip install "gptdb[agent,simple_framework, client]>=0.7.1" "gptdb_ext>=0.7.1" -U
 ````
 
 ### Prepare Embedding Model
@@ -73,20 +73,21 @@ store.
 import asyncio
 import shutil
 from gptdb.core.awel import DAG
-from gptdb.rag import ChunkParameters
+from gptdb_ext.rag import ChunkParameters
 from gptdb.rag.knowledge import KnowledgeType
-from gptdb.rag.operators import EmbeddingAssemblerOperator, KnowledgeOperator
-from gptdb.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
+from gptdb_ext.rag.operators import EmbeddingAssemblerOperator
+from gptdb_ext.rag.operators.knowledge import KnowledgeOperator
+from gptdb_ext.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
 
 # Delete old vector store directory(/tmp/awel_rag_test_vector_store)
 shutil.rmtree("/tmp/awel_rag_test_vector_store", ignore_errors=True)
 
 vector_store = ChromaStore(
     vector_store_config=ChromaVectorConfig(
-        name="test_vstore",
-        persist_path="/tmp/awel_rag_test_vector_store",
-        embedding_fn=embeddings
-    )
+        persist_path="/tmp/awel_rag_test_vector_store"
+    ),
+    name="test_vstore",
+    embedding_fn=embeddings
 )
 
 with DAG("load_knowledge_dag") as knowledge_dag:
@@ -252,12 +253,12 @@ import asyncio
 import shutil
 from gptdb.core.awel import DAG, MapOperator, InputOperator, JoinOperator, InputSource
 from gptdb.core.operators import PromptBuilderOperator, RequestBuilderOperator
-from gptdb.rag import ChunkParameters
+from gptdb_ext.rag import ChunkParameters
 from gptdb.rag.knowledge import KnowledgeType
-from gptdb.rag.operators import EmbeddingAssemblerOperator, KnowledgeOperator,
-    EmbeddingRetrieverOperator
+from gptdb_ext.rag.operators.embedding import EmbeddingAssemblerOperator, EmbeddingRetrieverOperator
+from gptdb_ext.rag.operators import KnowledgeOperator
 from gptdb.rag.embedding import DefaultEmbeddingFactory
-from gptdb.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
+from gptdb_ext.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
 from gptdb.model.operators import LLMOperator
 from gptdb.model.proxy import OpenAILLMClient
 
@@ -273,10 +274,10 @@ shutil.rmtree("/tmp/awel_rag_test_vector_store", ignore_errors=True)
 
 vector_store = ChromaStore(
     vector_store_config=ChromaVectorConfig(
-        name="test_vstore",
         persist_path="/tmp/awel_rag_test_vector_store",
-        embedding_fn=embeddings
     ),
+    name="test_vstore",
+    embedding_fn=embeddings
 )
 
 with DAG("load_knowledge_dag") as knowledge_dag:

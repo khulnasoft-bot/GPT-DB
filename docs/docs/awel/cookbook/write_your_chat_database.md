@@ -29,7 +29,8 @@ In this guide, we mainly focus on step 1, 2, and 3.
 First, you need to install the `gptdb` library.
 
 ```bash
-pip install "gptdb[rag]>=0.5.3rc0" -U
+pip install "gptdb[rag, agent, client, simple_framework]>=0.7.0" "gptdb_ext>=0.7.0" -U
+pip install openai
 ````
 
 ## Build Knowledge Base
@@ -52,7 +53,7 @@ embeddings = DefaultEmbeddingFactory.openai()
 Here we create a simple SQLite database.
 
 ```python
-from gptdb.datasource.rdbms.conn_sqlite import SQLiteTempConnector
+from gptdb_ext.datasource.rdbms.conn_sqlite import SQLiteTempConnector
 
 db_conn = SQLiteTempConnector.create_temporary_db()
 db_conn.create_temp_tables(
@@ -82,9 +83,9 @@ db_conn.create_temp_tables(
 import asyncio
 import shutil
 from gptdb.core.awel import DAG, InputOperator
-from gptdb.rag import ChunkParameters
-from gptdb.rag.operators import DBSchemaAssemblerOperator
-from gptdb.storage.vector_store.chroma_store import ChromaVectorConfig, ChromaStore
+from gptdb_ext.rag import ChunkParameters
+from gptdb_ext.rag.operators.db_schema import DBSchemaAssemblerOperator
+from gptdb_ext.storage.vector_store.chroma_store import ChromaVectorConfig, ChromaStore
 
 # Delete old vector store directory(/tmp/awel_with_data_vector_store)
 shutil.rmtree("/tmp/awel_with_data_vector_store", ignore_errors=True)
@@ -92,9 +93,9 @@ shutil.rmtree("/tmp/awel_with_data_vector_store", ignore_errors=True)
 vector_store = ChromaStore(
     ChromaVectorConfig(
         persist_path="/tmp/tmp_ltm_vector_store",
-        name="ltm_vector_store",
-        embedding_fn=embeddings,
-    )
+    ),
+    name="ltm_vector_store",
+    embedding_fn=embeddings,
 )
 
 with DAG("load_schema_dag") as load_schema_dag:
@@ -102,7 +103,7 @@ with DAG("load_schema_dag") as load_schema_dag:
     # Load database schema to vector store
     assembler_task = DBSchemaAssemblerOperator(
         connector=db_conn,
-        index_store=vector_store,
+        table_vector_store_connector=vector_store,
         chunk_parameters=ChunkParameters(chunk_strategy="CHUNK_BY_SIZE")
     )
     input_task >> assembler_task
@@ -115,14 +116,15 @@ print(chunks)
 
 ```python
 from gptdb.core.awel import InputSource
-from gptdb.rag.operators import DBSchemaRetrieverOperator
+from gptdb_ext.rag.operators.db_schema import DBSchemaRetrieverOperator
 
 with DAG("retrieve_schema_dag") as retrieve_schema_dag:
     input_task = InputOperator(input_source=InputSource.from_callable())
     # Retrieve database schema from vector store
     retriever_task = DBSchemaRetrieverOperator(
         top_k=1,
-        index_store=vector_store,
+        table_vector_store_connector=vector_store,
+        field_vector_store_connector=vector_store
     )
     input_task >> retriever_task
 
@@ -194,7 +196,7 @@ from gptdb.core import (
 )
 from gptdb.core.awel import DAG, InputOperator, InputSource, MapOperator, JoinOperator
 from gptdb.core.operators import PromptBuilderOperator, RequestBuilderOperator
-from gptdb.rag.operators import DBSchemaRetrieverOperator
+from gptdb_ext.rag.operators.db_schema import DBSchemaRetrieverOperator
 from gptdb.model.operators import LLMOperator
 
 system_prompt = """You are a database expert. Please answer the user's question based on the database selected by the user and some of the available table structure definitions of the database.
@@ -448,13 +450,13 @@ from gptdb.core.awel import (
 )
 from gptdb.core.operators import PromptBuilderOperator, RequestBuilderOperator
 from gptdb.datasource.operators import DatasourceOperator
-from gptdb.datasource.rdbms.conn_sqlite import SQLiteTempConnector
+from gptdb_ext.datasource.rdbms.conn_sqlite import SQLiteTempConnector
 from gptdb.model.operators import LLMOperator
 from gptdb.model.proxy import OpenAILLMClient
-from gptdb.rag import ChunkParameters
+from gptdb_ext.rag import ChunkParameters
 from gptdb.rag.embedding import DefaultEmbeddingFactory
-from gptdb.rag.operators import DBSchemaAssemblerOperator, DBSchemaRetrieverOperator
-from gptdb.storage.vector_store.chroma_store import ChromaVectorConfig, ChromaStore
+from gptdb_ext.rag.operators.db_schema import DBSchemaAssemblerOperator, DBSchemaRetrieverOperator
+from gptdb_ext.storage.vector_store.chroma_store import ChromaVectorConfig, ChromaStore
 
 # Delete old vector store directory(/tmp/awel_with_data_vector_store)
 shutil.rmtree("/tmp/awel_with_data_vector_store", ignore_errors=True)
@@ -487,10 +489,10 @@ db_conn.create_temp_tables(
 
 vector_store = ChromaStore(
     ChromaVectorConfig(
-        embedding_fn=embeddings,
-        name="db_schema_vector_store",
         persist_path="/tmp/awel_with_data_vector_store",
-    )
+    ),
+    embedding_fn=embeddings,
+    name="db_schema_vector_store",
 )
 
 antv_charts = [
@@ -623,7 +625,7 @@ with DAG("load_schema_dag") as load_schema_dag:
     # Load database schema to vector store
     assembler_task = DBSchemaAssemblerOperator(
         connector=db_conn,
-        index_store=vector_store,
+        table_vector_store_connector=vector_store,
         chunk_parameters=ChunkParameters(chunk_strategy="CHUNK_BY_SIZE"),
     )
     input_task >> assembler_task

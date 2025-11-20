@@ -1,13 +1,13 @@
 """AWEL: Simple dag example
 
-    GPT-DB will automatically load and execute the current file after startup.
+GPT-DB will automatically load and execute the current file after startup.
 
-    Example:
+Example:
 
-    .. code-block:: shell
+.. code-block:: shell
 
-        GPTDB_SERVER="http://127.0.0.1:5555"
-        curl -X GET $GPTDB_SERVER/api/v1/awel/trigger/examples/hello\?name\=zhangsan
+    GPTDB_SERVER="http://127.0.0.1:5555"
+    curl -X GET $GPTDB_SERVER/api/v1/awel/trigger/examples/hello\?name\=zhangsan
 
 """
 

@@ -1,15 +1,14 @@
-# Russian translations for PACKAGE package
-# Английские переводы для пакета PACKAGE.
-# Copyright (C) 2024 THE PACKAGE'S COPYRIGHT HOLDER
+# Russian translations for PACKAGE package.
+# Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Automatically generated, 2024.
+# Automatically generated, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 22:53+0800\n"
-"PO-Revision-Date: 2024-03-23 16:45+0800\n"
+"POT-Creation-Date: 2025-03-19 00:06+0800\n"
+"PO-Revision-Date: 2025-02-23 13:40+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ru\n"
@@ -19,769 +18,1075 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:39
-msgid "Common Chat Prompt Template"
-msgstr "Общий шаблон чата"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:135
+msgid "Dict Http Body"
+msgstr "Словарь HTTP-тела"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:42
-msgid "The operator to build the prompt with static prompt."
-msgstr "Оператор для создания приглашения с фиксированным приглашением."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:139
+msgid "Parse the request body as a dict or response body as a dict"
+msgstr "Разобрать тело запроса как словарь или тело ответа как словарь"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:45
-msgid "System Message"
-msgstr "Системное сообщение"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:165
+msgid "String Http Body"
+msgstr "Строка HTTP-тела"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:50
-msgid "The system message."
-msgstr "Системное сообщение."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:169
+msgid "Parse the request body as a string or response body as string"
+msgstr "Разобрать тело запроса как строку или тело ответа как строку"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:53
-msgid "Message placeholder"
-msgstr "Заполнитель сообщения"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:195
+msgid "Request Http Body"
+msgstr "Тело HTTP-запроса"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:58
-msgid "The chat history message placeholder."
-msgstr "Заполнитель сообщения истории чата."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:199
+msgid "Parse the request body as a starlette Request"
+msgstr "Разобрать тело запроса как запрос Starlette"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:61
-msgid "Human Message"
-msgstr "Сообщение от человека"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:227
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:110
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:225
+msgid "Common LLM Http Request Body"
+msgstr "Общее тело HTTP-запроса для LLM"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:67
-msgid "The human message."
-msgstr "Сообщение от человека."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:231
+msgid "Parse the request body as a common LLM http body"
+msgstr "Разобрать тело запроса как общее тело HTTP-запроса для LLM"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:255
-msgid "Prompt Builder Operator"
-msgstr "Оператор построения приглашения"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:307
+msgid "Common LLM Http Response Body"
+msgstr "Общее тело HTTP-ответа для LLM"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:257
-msgid "Build messages from prompt template."
-msgstr "Построить сообщения из шаблона приглашения."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:311
+msgid "Parse the response body as a common LLM http body"
+msgstr "Разобрать тело ответа как общее тело HTTP-ответа для LLM"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:261
-#: ../gptdb/core/interface/operators/prompt_operator.py:348
-msgid "Chat Prompt Template"
-msgstr "Шаблон чата"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:759
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:991
+msgid "API Endpoint"
+msgstr "Конечная точка API"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:264
-#: ../gptdb/core/interface/operators/prompt_operator.py:351
-msgid "The chat prompt template."
-msgstr "Шаблон чата."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:759
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:996
+msgid "The API endpoint"
+msgstr "Конечная точка API"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:269
-#: ../gptdb/core/interface/operators/prompt_operator.py:379
-msgid "Prompt Input Dict"
-msgstr "Словарь ввода приглашения"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:762
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:774
+msgid "Http Methods"
+msgstr "HTTP-методы"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:272
-#: ../gptdb/core/interface/operators/prompt_operator.py:382
-msgid "The prompt dict."
-msgstr "Словарь приглашения."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:767
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:779
+msgid "The methods of the API endpoint"
+msgstr "Методы конечной точки API"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:277
-#: ../gptdb/core/interface/operators/prompt_operator.py:387
-msgid "Formatted Messages"
-msgstr "Форматированные сообщения"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:769
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:783
+msgid "HTTP Method PUT"
+msgstr "HTTP-метод PUT"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:281
-#: ../gptdb/core/interface/operators/prompt_operator.py:391
-msgid "The formatted messages."
-msgstr "Отформатированные сообщения."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:770
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:784
+msgid "HTTP Method POST"
+msgstr "HTTP-метод POST"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:341
-msgid "History Prompt Builder Operator"
-msgstr "Оператор построения истории приглашений"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:781
+msgid "HTTP Method GET"
+msgstr "HTTP-метод GET"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:343
-msgid "Build messages from prompt template and chat history."
-msgstr "Построить сообщения из шаблона приглашения и истории чата."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:782
+msgid "HTTP Method DELETE"
+msgstr "HTTP-метод DELETE"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:354
-#: ../gptdb/core/operators/flow/composer_operator.py:65
-msgid "History Key"
-msgstr "Ключ истории"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:788
+msgid "Streaming Response"
+msgstr "Потоковый ответ"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:359
-msgid "The key of history in prompt dict."
-msgstr "Ключ истории в словаре приглашения."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:793
+msgid "Whether the response is streaming"
+msgstr "Является ли ответ потоковым"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:362
-msgid "String History"
-msgstr "Строковая история"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:796
+msgid "Http Response Body"
+msgstr "Тело HTTP-ответа"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:367
-msgid "Whether to convert the history to string."
-msgstr "Преобразовывать ли историю в строку."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:801
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1079
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1130
+msgid "The response body of the API endpoint"
+msgstr "Тело ответа API-эндпоинта"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:372
-msgid "History"
-msgstr "История"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:805
+msgid "Response Media Type"
+msgstr "Тип медиа-ответа"
 
-#: ../gptdb/core/interface/operators/prompt_operator.py:376
-msgid "The history."
-msgstr "История."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:810
+msgid "The response media type"
+msgstr "Тип медиа-ответа"
 
-#: ../gptdb/core/interface/operators/message_operator.py:122
-msgid "Chat History Load Operator"
-msgstr "Оператор загрузки истории чата"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:813
+msgid "Http Status Code"
+msgstr "HTTP-код состояния"
 
-#: ../gptdb/core/interface/operators/message_operator.py:125
-msgid "The operator to load chat history from storage."
-msgstr "Оператор для загрузки истории чата из хранилища."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:818
+msgid "The http status code"
+msgstr "HTTP-код состояния"
 
-#: ../gptdb/core/interface/operators/message_operator.py:128
-#: ../gptdb/core/operators/flow/composer_operator.py:92
-msgid "Conversation Storage"
-msgstr "Хранилище беседы"
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:829
+msgid "Dict Http Trigger"
+msgstr "Словарь HTTP-триггера"
 
-#: ../gptdb/core/interface/operators/message_operator.py:134
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:834
 msgid ""
-"The conversation storage, store the conversation items(Not include message "
-"items). If None, we will use InMemoryStorage."
+"Trigger your workflow by http request, and parse the request body as a dict"
 msgstr ""
-"Хранилище беседы, хранит элементы беседы (не включая элементы сообщений). "
-"Если значение None, мы будем использовать InMemoryStorage."
+"Запустите свой рабочий процесс с помощью HTTP-запроса и распарсите тело запроса в виде словаря"
 
-#: ../gptdb/core/interface/operators/message_operator.py:139
-#: ../gptdb/core/operators/flow/composer_operator.py:100
-msgid "Message Storage"
-msgstr "Хранилище сообщений"
-
-#: ../gptdb/core/interface/operators/message_operator.py:145
-msgid ""
-"The message storage, store the messages of one conversation. If None, we "
-"will use InMemoryStorage."
-msgstr ""
-"Хранилище сообщений, хранит сообщения одной беседы. Если значение None, мы "
-"будем использовать InMemoryStorage."
-
-#: ../gptdb/core/interface/operators/message_operator.py:152
-#: ../gptdb/core/interface/operators/llm_operator.py:99
-#: ../gptdb/core/interface/operators/llm_operator.py:202
-#: ../gptdb/core/interface/operators/llm_operator.py:217
-#: ../gptdb/core/interface/operators/llm_operator.py:363
-#: ../gptdb/core/operators/flow/composer_operator.py:118
-msgid "Model Request"
-msgstr "Запрос модели"
-
-#: ../gptdb/core/interface/operators/message_operator.py:155
-msgid "The model request."
-msgstr "Запрос модели."
-
-#: ../gptdb/core/interface/operators/message_operator.py:160
-msgid "Stored Messages"
-msgstr "Сохраненные сообщения"
-
-#: ../gptdb/core/interface/operators/message_operator.py:163
-msgid "The messages stored in the storage."
-msgstr "Сообщения, хранящиеся в хранилище."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:51
-msgid "Build Model Request"
-msgstr "Создать запрос модели"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:54
-msgid "Build the model request from the http request body."
-msgstr "Создать запрос модели из тела http-запроса."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:57
-msgid "Default Model Name"
-msgstr "Имя модели по умолчанию"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:62
-msgid "The model name of the model request."
-msgstr "Имя модели в запросе модели."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:65
-msgid "Temperature"
-msgstr "Температура"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:70
-msgid "The temperature of the model request."
-msgstr "Температура запроса модели."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:73
-msgid "Max New Tokens"
-msgstr "Максимальное количество новых токенов"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:78
-msgid "The max new tokens of the model request."
-msgstr "Максимальное количество новых токенов в запросе модели."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:81
-msgid "Context Length"
-msgstr "Длина контекста"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:86
-msgid "The context length of the model request."
-msgstr "Длина контекста запроса модели."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:91
-#: ../gptdb/core/awel/trigger/ext_http_trigger.py:40
-#: ../gptdb/core/awel/trigger/http_trigger.py:735
-#: ../gptdb/core/awel/trigger/http_trigger.py:794
-#: ../gptdb/core/awel/trigger/http_trigger.py:855
-#: ../gptdb/core/awel/trigger/http_trigger.py:986
-#: ../gptdb/core/awel/trigger/http_trigger.py:1043
-#: ../gptdb/core/awel/trigger/http_trigger.py:1092
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:840
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:899
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:970
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1119
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1176
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1225
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:42
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:98
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:97
 msgid "Request Body"
 msgstr "Тело запроса"
 
-#: ../gptdb/core/interface/operators/llm_operator.py:94
-#: ../gptdb/core/interface/operators/llm_operator.py:366
-#: ../gptdb/core/interface/operators/llm_operator.py:440
-#: ../gptdb/core/interface/operators/llm_operator.py:531
-#: ../gptdb/core/interface/operators/llm_operator.py:539
-msgid "The input value of the operator."
-msgstr "Входное значение оператора."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:843
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1122
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1179
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1228
+msgid "The request body of the API endpoint"
+msgstr "Тело запроса конечной точки API"
 
-#: ../gptdb/core/interface/operators/llm_operator.py:102
-#: ../gptdb/core/interface/operators/llm_operator.py:220
-#: ../gptdb/core/interface/operators/llm_operator.py:448
-msgid "The output value of the operator."
-msgstr "Выходное значение оператора."
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:888
+msgid "String Http Trigger"
+msgstr "Строковый HTTP-триггер"
 
-#: ../gptdb/core/interface/operators/llm_operator.py:195
-msgid "Merge Model Request Messages"
-msgstr "Объединить сообщения запроса модели"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:198
-msgid "Merge the model request from the input value."
-msgstr "Объединить запрос модели из входного значения."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:205
-msgid "The model request of upstream."
-msgstr "Запрос модели верхнего потока."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:208
-msgid "Model messages"
-msgstr "Сообщения модели"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:211
-msgid "The model messages of upstream."
-msgstr "Сообщения модели верхнего потока."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:338
-msgid "LLM Branch Operator"
-msgstr "Оператор ветвления LLM"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:342
-msgid "Branch the workflow based on the stream flag of the request."
-msgstr "Ветвление рабочего процесса на основе флага потока запроса."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:345
-msgid "Streaming Task Name"
-msgstr "Имя задачи потоковой передачи"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:350
-msgid "The name of the streaming task."
-msgstr "Имя задачи потоковой передачи."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:353
-msgid "Non-Streaming Task Name"
-msgstr "Имя задачи без потоковой передачи"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:358
-msgid "The name of the non-streaming task."
-msgstr "Имя задачи без потоковой передачи."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:371
-msgid "Streaming Model Request"
-msgstr "Запрос модели для потоковой передачи"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:374
-msgid "The streaming request, to streaming Operator."
-msgstr "Запрос потоковой передачи, к оператору потоковой передачи."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:377
-msgid "Non-Streaming Model Request"
-msgstr "Запрос модели без потоковой передачи"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:380
-msgid "The non-streaming request, to non-streaming Operator."
-msgstr "Запрос без потоковой передачи, к оператору без потоковой передачи."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:430
-msgid "Map Model Output to Common Response Body"
-msgstr "Отобразить выход модели в общее тело ответа"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:433
-msgid "Map the model output to the common response body."
-msgstr "Отобразить вывод модели в общее тело ответа."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:437
-#: ../gptdb/core/interface/operators/llm_operator.py:491
-#: ../gptdb/core/interface/operators/llm_operator.py:536
-#: ../gptdb/core/interface/output_parser.py:40
-#: ../gptdb/core/interface/output_parser.py:49
-msgid "Model Output"
-msgstr "Выход модели"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:445
-msgid "Common Response Body"
-msgstr "Общее тело ответа"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:474
-msgid "Common Streaming Output Operator"
-msgstr "Общий оператор потокового вывода"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:478
-msgid "The common streaming LLM operator, for chat flow."
-msgstr "Общий оператор потокового вывода LLM для потока чата."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:482
-msgid "Upstream Model Output"
-msgstr "Выходная модель выше по потоку"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:486
-#: ../gptdb/core/interface/output_parser.py:44
-msgid "The model output of upstream."
-msgstr "Выход модели выше по потоку."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:496
-msgid "The model output after transform to common stream format"
-msgstr "Выход модели после преобразования в общий формат потока"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:521
-msgid "Map String to ModelOutput"
-msgstr "Отобразить строку на Выход модели"
-
-#: ../gptdb/core/interface/operators/llm_operator.py:524
-msgid "Map String to ModelOutput."
-msgstr "Отобразить строку на Выход модели."
-
-#: ../gptdb/core/interface/operators/llm_operator.py:528
-msgid "String"
-msgstr "Строка"
-
-#: ../gptdb/core/interface/output_parser.py:32
-msgid "Base Output Operator"
-msgstr "Базовый оператор вывода"
-
-#: ../gptdb/core/interface/output_parser.py:36
-msgid "The base LLM out parse."
-msgstr "Базовый анализ вывода LLM."
-
-#: ../gptdb/core/interface/output_parser.py:53
-msgid "The model output after parsing."
-msgstr "Выход модели после анализа."
-
-#: ../gptdb/core/interface/storage.py:390
-msgid "Memory Storage"
-msgstr "Хранилище в памяти"
-
-#: ../gptdb/core/interface/storage.py:393
-msgid "Save your data in memory."
-msgstr "Сохраните свои данные в памяти."
-
-#: ../gptdb/core/interface/storage.py:396
-msgid "Serializer"
-msgstr "Сериализатор"
-
-#: ../gptdb/core/interface/storage.py:402
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:893
 msgid ""
-"The serializer for serializing the data. If not set, the default JSON "
-"serializer will be used."
+"Trigger your workflow by http request, and parse the request body as a string"
 msgstr ""
-"Сериализатор для сериализации данных. Если не установлен, будет использован "
-"сериализатор JSON по умолчанию."
+"Запустите свой рабочий процесс с помощью HTTP-запроса и распарсите тело "
+"запроса как строку"
 
-#: ../gptdb/core/operators/flow/composer_operator.py:42
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:903
+msgid "The request body of the API endpoint, parse as a json string"
+msgstr "Тело запроса конечной точки API, распарсить как JSON-строку"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:959
+msgid "Common LLM Http Trigger"
+msgstr "Общий HTTP-триггер LLM"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:964
+msgid ""
+"Trigger your workflow by http request, and parse the request body as a "
+"common LLM http body"
+msgstr ""
+"Запустите свой рабочий процесс с помощью HTTP-запроса и распарсите тело "
+"запроса как общее HTTP-тело LLM"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:974
+msgid "The request body of the API endpoint, parse as a common LLM http body"
+msgstr "Тело запроса конечной точки API, распарсить как общее HTTP-тело LLM"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:979
+msgid "Request String Messages"
+msgstr "Запрос на строковые сообщения"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:983
+msgid ""
+"The request string messages of the API endpoint, parsed from 'messages' "
+"field of the request body"
+msgstr ""
+"Строковые сообщения запроса конечной точки API, распарсенные из поля "
+"'messages' тела запроса"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1036
+msgid "Example Http Response"
+msgstr "Пример HTTP-ответа"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1040
+msgid "Example Http Request"
+msgstr "Пример HTTP-запроса"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1062
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1082
+msgid "Example Http Hello Operator"
+msgstr "Пример HTTP-оператора приветствия"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1068
+msgid "Http Request Body"
+msgstr "HTTP-тело запроса"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1071
+msgid "The request body of the API endpoint(Dict[str, Any])"
+msgstr "Тело запроса API-точки доступа (Dict[str, Any])"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1076
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1127
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:106
+msgid "Response Body"
+msgstr "Тело ответа"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1102
+msgid "Request Body To Dict Operator"
+msgstr "Оператор преобразования тела запроса в словарь"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1107
+msgid "Prefix Key"
+msgstr "Префиксный ключ"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1113
+msgid "The prefix key of the dict, link 'message' or 'extra.info'"
+msgstr "Префиксный ключ словаря, например 'message' или 'extra.info'"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1161
+msgid "User Input Parsed Operator"
+msgstr "Оператор разбора пользовательского ввода"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1166
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1215
+msgid "Key"
+msgstr "Ключ"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1171
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1220
+msgid "The key of the dict, link 'user_input'"
+msgstr "Ключ словаря, например 'user_input'"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1184
+msgid "User Input Dict"
+msgstr "Словарь пользовательского ввода"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1187
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1236
+msgid "The user input dict of the API endpoint"
+msgstr "Словарь пользовательского ввода для конечной точки API"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1191
+msgid ""
+"User input parsed operator, parse the user input from request body and "
+"return as a dict"
+msgstr ""
+"Оператор разбора пользовательского ввода, который разбирает пользовательский "
+"ввод из тела запроса и возвращает в виде словаря"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1210
+msgid "Request Body Parsed To String Operator"
+msgstr "Оператор преобразования тела запроса в строку"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1233
+msgid "User Input String"
+msgstr "Строка пользовательского ввода"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/http_trigger.py:1240
+msgid ""
+"User input parsed operator, parse the user input from request body and "
+"return as a string"
+msgstr ""
+"Оператор разбора пользовательского ввода, который разбирает пользовательский "
+"ввод из тела запроса и возвращает в виде строки"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:31
+msgid "Request Http Trigger"
+msgstr "Триггер HTTP-запроса"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:36
+msgid ""
+"Trigger your workflow by http request, and parse the request body as a "
+"starlette Request"
+msgstr ""
+"Запустите свой рабочий процесс с помощью HTTP-запроса и разбирайте тело запроса "
+"как объект starlette Request"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:46
+msgid "The request body of the API endpoint, parse as a starlette Request"
+msgstr "Тело запроса конечной точки API, разбираемое как объект starlette Request"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:92
+msgid "HTTP Sender"
+msgstr "Отправитель HTTP-запросов"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:95
+msgid "Send a HTTP request to a specified endpoint"
+msgstr "Отправить HTTP-запрос на указанную конечную точку"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:101
+msgid "The request body to send"
+msgstr "Тело запроса для отправки"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:109
+msgid "The response body of the HTTP request"
+msgstr "Тело ответа HTTP-запроса"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:114
+msgid "HTTP Address"
+msgstr "HTTP-адрес"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:115
+msgid "address"
+msgstr "адрес"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:117
+msgid "The address to send the HTTP request to"
+msgstr "Адрес, на который отправляется HTTP-запрос"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:122
+msgid "Timeout"
+msgstr "Тайм-аут"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:127
+msgid "The timeout of the HTTP request in seconds"
+msgstr "Тайм-аут HTTP-запроса в секундах"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:130
+msgid "Token"
+msgstr "Токен"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:135
+msgid "The token to use for the HTTP request"
+msgstr "Токен, используемый для HTTP-запроса"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:138
+msgid "Cookies"
+msgstr "Куки"
+
+#: ../packages/gptdb-core/src/gptdb/core/awel/trigger/ext_http_trigger.py:143
+msgid "The cookies to use for the HTTP request"
+msgstr "Куки, используемые для HTTP-запроса"
+
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:42
 msgid "Conversation Composer Operator"
-msgstr "Оператор композитора разговора"
+msgstr "Оператор составления диалога"
 
-#: ../gptdb/core/operators/flow/composer_operator.py:46
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:46
 msgid ""
 "A composer operator for conversation.\n"
 "Including chat history handling, prompt composing, etc. Output is "
 "ModelRequest."
 msgstr ""
-"Оператор композитора для разговора.\n"
-"Включая обработку истории чата, составление подсказок и т. д. Выход - "
+"Оператор составления диалога.\n"
+"Включает обработку истории чата, составление промптов и т.д. Выход - "
 "ModelRequest."
 
-#: ../gptdb/core/operators/flow/composer_operator.py:51
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:51
 msgid "Prompt Template"
-msgstr "Шаблон подсказки"
+msgstr "Шаблон промпта"
 
-#: ../gptdb/core/operators/flow/composer_operator.py:54
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:54
 msgid "The prompt template for the conversation."
-msgstr "Шаблон подсказки для разговора."
+msgstr "Шаблон промпта для диалога."
 
-#: ../gptdb/core/operators/flow/composer_operator.py:57
-#: ../gptdb/core/operators/flow/composer_operator.py:216
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:57
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:215
 msgid "Human Message Key"
-msgstr "Ключ человеческого сообщения"
+msgstr "Ключ для сообщения человека"
 
-#: ../gptdb/core/operators/flow/composer_operator.py:62
-#: ../gptdb/core/operators/flow/composer_operator.py:221
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:62
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:220
 msgid "The key for human message in the prompt format dict."
-msgstr "Ключ для человеческого сообщения в словаре формата подсказки."
+msgstr "Ключ для сообщения человека в словаре формата промпта."
 
-#: ../gptdb/core/operators/flow/composer_operator.py:71
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:65
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:356
+msgid "History Key"
+msgstr "Ключ истории"
+
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:71
 msgid ""
 "The chat history key, with chat history message pass to prompt template."
 msgstr ""
-"Ключ истории чата, с сообщением истории чата, переданным в шаблон подсказки."
+"Ключ истории чата, с помощью которого сообщения истории чата передаются в "
+"шаблон промпта."
 
-#: ../gptdb/core/operators/flow/composer_operator.py:76
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:76
 msgid "Keep Start Rounds"
-msgstr "Сохранить начальные раунды"
+msgstr "Сохранять начальные раунды"
 
-#: ../gptdb/core/operators/flow/composer_operator.py:81
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:81
 msgid "The start rounds to keep in the chat history."
-msgstr "Начальные раунды для сохранения в истории чата."
+msgstr "Начальные раунды, которые нужно сохранить в истории чата."
 
-#: ../gptdb/core/operators/flow/composer_operator.py:84
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:84
 msgid "Keep End Rounds"
-msgstr "Сохранить конечные раунды"
+msgstr "Сохранять конечные раунды"
 
-#: ../gptdb/core/operators/flow/composer_operator.py:89
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:89
 msgid "The end rounds to keep in the chat history."
-msgstr "Конечные раунды для сохранения в истории чата."
+msgstr "Конечные раунды, которые нужно сохранить в истории чата."
 
-#: ../gptdb/core/operators/flow/composer_operator.py:97
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:92
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/message_operator.py:130
+msgid "Conversation Storage"
+msgstr "Хранилище диалогов"
+
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:97
 msgid "The conversation storage(Not include message detail)."
-msgstr "Хранилище разговора (не включая детали сообщения)."
+msgstr "Хранилище диалогов (не включает детали сообщений)."
 
-#: ../gptdb/core/operators/flow/composer_operator.py:105
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:100
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/message_operator.py:141
+msgid "Message Storage"
+msgstr "Хранилище сообщений"
+
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:105
 msgid "The message storage."
 msgstr "Хранилище сообщений."
 
-#: ../gptdb/core/operators/flow/composer_operator.py:110
-#: ../gptdb/core/operators/flow/composer_operator.py:226
-#: ../gptdb/core/awel/trigger/http_trigger.py:200
-msgid "Common LLM Http Request Body"
-msgstr "Общее тело запроса HTTP для LLM"
-
-#: ../gptdb/core/operators/flow/composer_operator.py:113
-#: ../gptdb/core/operators/flow/composer_operator.py:229
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:113
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:228
 msgid "The common LLM http request body."
-msgstr "Общее тело запроса HTTP для LLM."
+msgstr "Общее тело HTTP-запроса для LLM."
 
-#: ../gptdb/core/operators/flow/composer_operator.py:121
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:118
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:105
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:208
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:223
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:370
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/message_operator.py:154
+msgid "Model Request"
+msgstr "Запрос к модели"
+
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:121
 msgid "The model request with chat history prompt."
-msgstr "Запрос модели с историей чата в качестве подсказки."
+msgstr "Запрос к модели с подсказкой на основе истории чата."
 
-#: ../gptdb/core/operators/flow/composer_operator.py:207
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:207
 msgid "Prompt Format Dict Builder Operator"
-msgstr "Оператор построения словаря формата подсказки"
+msgstr "Оператор для создания словаря формата подсказки"
 
-#: ../gptdb/core/operators/flow/composer_operator.py:211
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:211
 msgid ""
 "A operator to build prompt format dict from common LLM http request body."
-msgstr "Оператор для построения словаря формата подсказки из общего тела http-запроса LLM."
+msgstr ""
+"Оператор для создания словаря формата подсказки из общего тела HTTP-запроса "
+"для LLM."
 
-#: ../gptdb/core/operators/flow/composer_operator.py:234
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:233
 msgid "Prompt Format Dict"
 msgstr "Словарь формата подсказки"
 
-#: ../gptdb/core/operators/flow/composer_operator.py:237
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/composer_operator.py:236
 msgid "The prompt format dict."
 msgstr "Словарь формата подсказки."
 
-#: ../gptdb/core/operators/flow/dict_operator.py:14
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:14
 msgid "Merge String to Dict Operator"
 msgstr "Оператор объединения строки в словарь"
 
-#: ../gptdb/core/operators/flow/dict_operator.py:18
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:18
 msgid ""
 "Merge two strings to a dict, the fist string which is the value from first "
 "upstream is the value of the key `first_key`, the second string which is the "
 "value from second upstream is the value of the key `second_key`."
 msgstr ""
-"Объединить две строки в словарь, первая строка, которая является значением из первого "
-"входного потока, является значением ключа `first_key`, вторая строка, которая является "
-"значением из второго входного потока, является значением ключа `second_key`."
+"Объединить две строки в словарь. Первая строка, являющаяся значением из "
+"первого источника данных, становится значением ключа `first_key`, вторая строка, "
+"являющаяся значением из второго источника данных, становится значением ключа "
+"`second_key`."
 
-#: ../gptdb/core/operators/flow/dict_operator.py:24
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:24
 msgid "First Key"
 msgstr "Первый ключ"
 
-#: ../gptdb/core/operators/flow/dict_operator.py:29
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:29
 msgid "The key for the first string, default is `user_input`."
 msgstr "Ключ для первой строки, по умолчанию `user_input`."
 
-#: ../gptdb/core/operators/flow/dict_operator.py:32
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:32
 msgid "Second Key"
 msgstr "Второй ключ"
 
-#: ../gptdb/core/operators/flow/dict_operator.py:37
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:37
 msgid "The key for the second string, default is `context`."
 msgstr "Ключ для второй строки, по умолчанию `context`."
 
-#: ../gptdb/core/operators/flow/dict_operator.py:42
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:42
 msgid "First String"
 msgstr "Первая строка"
 
-#: ../gptdb/core/operators/flow/dict_operator.py:45
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:45
 msgid "The first string from first upstream."
-msgstr "Первая строка из первого входного потока."
+msgstr "Первая строка от первого источника данных."
 
-#: ../gptdb/core/operators/flow/dict_operator.py:48
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:48
 msgid "Second String"
 msgstr "Вторая строка"
 
-#: ../gptdb/core/operators/flow/dict_operator.py:51
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:51
 msgid "The second string from second upstream."
-msgstr "Вторая строка из второго входного потока."
+msgstr "Вторая строка от второго источника данных."
 
-#: ../gptdb/core/operators/flow/dict_operator.py:56
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:56
 msgid "Output"
-msgstr "Выход"
+msgstr "Вывод"
 
-#: ../gptdb/core/operators/flow/dict_operator.py:60
+#: ../packages/gptdb-core/src/gptdb/core/operators/flow/dict_operator.py:60
 msgid "The merged dict. example: {'user_input': 'first', 'context': 'second'}."
 msgstr "Объединенный словарь. Пример: {'user_input': 'first', 'context': 'second'}."
 
-#: ../gptdb/core/awel/trigger/ext_http_trigger.py:29
-msgid "Request Http Trigger"
-msgstr "Триггер HTTP-запроса"
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:38
+msgid "Base Output Operator"
+msgstr "Базовый оператор вывода"
 
-#: ../gptdb/core/awel/trigger/ext_http_trigger.py:34
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:42
+msgid "The base LLM out parse."
+msgstr "Базовый парсер вывода LLM."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:46
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:55
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:308
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:349
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:456
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:512
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:557
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:608
+msgid "Model Output"
+msgstr "Вывод модели"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:50
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:311
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:352
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:507
+msgid "The model output of upstream."
+msgstr "Вывод модели от предыдущего этапа."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:59
+msgid "The model output after parsing."
+msgstr "Вывод модели после разбора."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:301
+msgid "SQL Output Parser"
+msgstr "Парсер вывода SQL"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:304
+msgid "Parse the SQL output of an LLM call."
+msgstr "Разобрать вывод SQL от вызова LLM."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:316
+msgid "Dict SQL Output"
+msgstr "Вывод SQL в виде словаря"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:319
+msgid "The dict output after parsing."
+msgstr "Вывод в виде словаря после разбора."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:340
+msgid "SQL List Output Parser"
+msgstr "Парсер вывода списка SQL"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:344
+msgid "Parse the SQL list output of an LLM call, mostly used for dashboard."
+msgstr "Разобрать вывод списка SQL от вызова LLM, в основном используется для панели мониторинга."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:357
+msgid "List SQL Output"
+msgstr "Вывод SQL в виде списка"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/output_parser.py:361
+msgid "The list output after parsing."
+msgstr "Список вывода после разбора."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/storage.py:391
+msgid "Memory Storage"
+msgstr "Память хранения"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/storage.py:394
+msgid "Save your data in memory."
+msgstr "Сохраняйте свои данные в памяти."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/storage.py:397
+msgid "Serializer"
+msgstr "Сериализатор"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/storage.py:403
 msgid ""
-"Trigger your workflow by http request, and parse the request body as a "
-"starlette Request"
+"The serializer for serializing the data. If not set, the default JSON "
+"serializer will be used."
 msgstr ""
-"Запустите свой рабочий процесс с помощью http-запроса и проанализируйте тело запроса как запрос starlette"
+"Сериализатор для сериализации данных. Если не установлен, будет использован "
+"стандартный JSON-сериализатор."
 
-#: ../gptdb/core/awel/trigger/ext_http_trigger.py:44
-msgid "The request body of the API endpoint, parse as a starlette Request"
-msgstr "Тело запроса конечной точки API, разбирается как запрос starlette"
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:23
+msgid "The name of the model."
+msgstr "Название модели."
 
-#: ../gptdb/core/awel/trigger/http_trigger.py:108
-msgid "Dict Http Body"
-msgstr "Тело HTTP в виде словаря"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:112
-msgid "Parse the request body as a dict or response body as a dict"
-msgstr "Разбор тела запроса как словаря или тела ответа как словаря"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:138
-msgid "String Http Body"
-msgstr "Тело HTTP в виде строки"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:142
-msgid "Parse the request body as a string or response body as string"
-msgstr "Разбор тела запроса как строки или тела ответа как строки"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:168
-msgid "Request Http Body"
-msgstr "Тело HTTP-запроса"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:172
-msgid "Parse the request body as a starlette Request"
-msgstr "Разбор тела запроса как запрос starlette"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:204
-msgid "Parse the request body as a common LLM http body"
-msgstr "Разбор тела запроса как общего тела http-запроса LLM"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:264
-msgid "Common LLM Http Response Body"
-msgstr "Общее тело ответа на HTTP-запрос LLM"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:268
-msgid "Parse the response body as a common LLM http body"
-msgstr "Разбор тела ответа как общего тела http-запроса LLM"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:654
-msgid "API Endpoint"
-msgstr "Конечная точка API"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:654
-msgid "The API endpoint"
-msgstr "Конечная точка API"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:657
-#: ../gptdb/core/awel/trigger/http_trigger.py:669
-msgid "Http Methods"
-msgstr "Методы HTTP"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:662
-#: ../gptdb/core/awel/trigger/http_trigger.py:674
-msgid "The methods of the API endpoint"
-msgstr "Методы конечной точки API"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:664
-#: ../gptdb/core/awel/trigger/http_trigger.py:678
-msgid "HTTP Method PUT"
-msgstr "Метод HTTP PUT"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:665
-#: ../gptdb/core/awel/trigger/http_trigger.py:679
-msgid "HTTP Method POST"
-msgstr "Метод HTTP POST"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:676
-msgid "HTTP Method GET"
-msgstr "Метод HTTP GET"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:677
-msgid "HTTP Method DELETE"
-msgstr "Метод HTTP DELETE"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:683
-msgid "Streaming Response"
-msgstr "Потоковый ответ"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:688
-msgid "Whether the response is streaming"
-msgstr "Является ли ответ потоковым"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:691
-msgid "Http Response Body"
-msgstr "Тело HTTP-ответа"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:696
-#: ../gptdb/core/awel/trigger/http_trigger.py:946
-#: ../gptdb/core/awel/trigger/http_trigger.py:997
-msgid "The response body of the API endpoint"
-msgstr "Тело ответа конечной точки API"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:700
-msgid "Response Media Type"
-msgstr "Тип медиа-ответа"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:705
-msgid "The response media type"
-msgstr "Тип медиа-ответа"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:708
-msgid "Http Status Code"
-msgstr "Код состояния HTTP"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:713
-msgid "The http status code"
-msgstr "Код состояния HTTP"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:724
-msgid "Dict Http Trigger"
-msgstr "Триггер HTTP для словаря"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:729
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:31
 msgid ""
-"Trigger your workflow by http request, and parse the request body as a dict"
+"The provider of the model. If model is deployed in local, this is the "
+"inference type. If model is deployed in third-party service, this is "
+"platform name('proxy/<platform>')"
 msgstr ""
-"Запуск вашего рабочего процесса по запросу HTTP и разбор тела запроса как словаря"
+"Поставщик модели. Если модель развернута локально, это тип вывода. Если "
+"модель развернута в стороннем сервисе, это имя платформы ('proxy/"
+"<платформа>')"
 
-#: ../gptdb/core/awel/trigger/http_trigger.py:738
-#: ../gptdb/core/awel/trigger/http_trigger.py:989
-#: ../gptdb/core/awel/trigger/http_trigger.py:1046
-#: ../gptdb/core/awel/trigger/http_trigger.py:1095
-msgid "The request body of the API endpoint"
-msgstr "Тело запроса конечной точки API"
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:47
+msgid "Show verbose output."
+msgstr "Показать подробный вывод."
 
-#: ../gptdb/core/awel/trigger/http_trigger.py:783
-msgid "String Http Trigger"
-msgstr "Триггер HTTP для строки"
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:50
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:145
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:163
+msgid "Model concurrency limit"
+msgstr "Ограничение параллелизма модели"
 
-#: ../gptdb/core/awel/trigger/http_trigger.py:788
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:83
 msgid ""
-"Trigger your workflow by http request, and parse the request body as a string"
+"The real model name to pass to the provider, default is None. If backend is "
+"None, use name as the real model name."
 msgstr ""
-"Запуск вашего рабочего процесса по запросу HTTP и разбор тела запроса как строки"
+"Реальное название модели, которое нужно передать поставщику, по умолчанию "
+"None. Если бэкенд равен None, использовать название как реальное название "
+"модели."
 
-#: ../gptdb/core/awel/trigger/http_trigger.py:798
-msgid "The request body of the API endpoint, parse as a json string"
-msgstr "Тело запроса конечной точки API, разбирается как строка JSON"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:844
-msgid "Common LLM Http Trigger"
-msgstr "Общий триггер HTTP для LLM"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:849
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:93
 msgid ""
-"Trigger your workflow by http request, and parse the request body as a "
-"common LLM http body"
+"Prompt template. If None, the prompt template is automatically determined "
+"from model. Just for local deployment."
 msgstr ""
-"Запуск вашего рабочего процесса по запросу HTTP и разбор тела запроса как "
-"общее тело HTTP для LLM"
+"Шаблон запроса. Если значение равно None, шаблон запроса автоматически определяется из "
+"модели. Это применяется только для локального развертывания."
 
-#: ../gptdb/core/awel/trigger/http_trigger.py:859
-msgid "The request body of the API endpoint, parse as a common LLM http body"
-msgstr "Тело запроса конечной точки API, разбирается как общее тело HTTP для LLM"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:903
-msgid "Example Http Response"
-msgstr "Пример HTTP-ответа"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:907
-msgid "Example Http Request"
-msgstr "Пример HTTP-запроса"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:929
-#: ../gptdb/core/awel/trigger/http_trigger.py:949
-msgid "Example Http Hello Operator"
-msgstr "Пример оператора приветствия HTTP"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:935
-msgid "Http Request Body"
-msgstr "Тело запроса HTTP"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:938
-msgid "The request body of the API endpoint(Dict[str, Any])"
-msgstr "Тело запроса конечной точки API (Dict[str, Any])"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:943
-#: ../gptdb/core/awel/trigger/http_trigger.py:994
-msgid "Response Body"
-msgstr "Тело ответа"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:969
-msgid "Request Body To Dict Operator"
-msgstr "Оператор преобразования тела запроса в словарь"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:974
-msgid "Prefix Key"
-msgstr "Префикс ключа"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:980
-msgid "The prefix key of the dict, link 'message' or 'extra.info'"
-msgstr "Префикс ключа словаря, связь 'message' или 'extra.info'"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:1028
-msgid "User Input Parsed Operator"
-msgstr "Оператор разбора пользовательского ввода"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:1033
-#: ../gptdb/core/awel/trigger/http_trigger.py:1082
-msgid "Key"
-msgstr "Ключ"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:1038
-#: ../gptdb/core/awel/trigger/http_trigger.py:1087
-msgid "The key of the dict, link 'user_input'"
-msgstr "Ключ словаря, связанный с 'user_input'"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:1051
-msgid "User Input Dict"
-msgstr "Словарь пользовательского ввода"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:1054
-#: ../gptdb/core/awel/trigger/http_trigger.py:1103
-msgid "The user input dict of the API endpoint"
-msgstr "Словарь пользовательского ввода точки API"
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:1058
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:102
 msgid ""
-"User input parsed operator, parse the user input from request body and "
-"return as a dict"
+"The context length of the model. If None, it is automatically determined "
+"from model."
 msgstr ""
-"Оператор разбора пользовательского ввода, разбирает пользовательский ввод из тела запроса и возвращает в виде словаря"
+"Длина контекста модели. Если значение равно None, она автоматически определяется из модели."
 
-#: ../gptdb/core/awel/trigger/http_trigger.py:1077
-msgid "Request Body Parsed To String Operator"
-msgstr ""
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:1100
-msgid "User Input String"
-msgstr ""
-
-#: ../gptdb/core/awel/trigger/http_trigger.py:1107
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:201
 msgid ""
-"User input parsed operator, parse the user input from request body and "
-"return as a string"
+"Whether to load the model in 8 bits(LLM.int8() algorithm), default is False."
 msgstr ""
-"Оператор разбора пользовательского ввода, разбирает пользовательский ввод из тела запроса и возвращает в виде строки"
+"Загружать ли модель в 8-битном формате (алгоритм LLM.int8()), по умолчанию - "
+"нет."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:209
+msgid "Whether to load the model in 4 bits, default is False."
+msgstr "Загружать ли модель в 4-битном формате, по умолчанию - нет."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:262
+msgid "Whether to load the model in 8 bits(LLM.int8() algorithm)."
+msgstr "Загружать ли модель в 8-битном формате (алгоритм LLM.int8())."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:270
+msgid ""
+"8-bit models can offload weights between the CPU and GPU to support fitting "
+"very large models into memory. The weights dispatched to the CPU are "
+"actually stored in float32, and aren’t converted to 8-bit. "
+msgstr ""
+"8-битные модели могут распределять веса между ЦП и ГПУ, чтобы поместить "
+"очень большие модели в память. Веса, отправляемые на ЦП, фактически хранятся "
+"в формате float32 и не преобразуются в 8-битный формат."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:280
+msgid ""
+"An “outlier” is a hidden state value greater than a certain threshold, and "
+"these values are computed in fp16. While the values are usually normally "
+"distributed ([-3.5, 3.5]), this distribution can be very different for large "
+"models ([-60, 6] or [6, 60]). 8-bit quantization works well for values ~5, "
+"but beyond that, there is a significant performance penalty. A good default "
+"threshold value is 6, but a lower threshold may be needed for more unstable "
+"models (small models or finetuning)."
+msgstr ""
+"«Выброс» - это значение скрытого состояния, превышающее определенный порог, "
+"и эти значения вычисляются в формате fp16. Хотя значения обычно имеют "
+"нормальное распределение ([-3.5, 3.5]), для крупных моделей это "
+"распределение может быть очень разным ([-60, 6] или [6, 60]). 8-битная "
+"квантование хорошо работает для значений ~5, но при выходе за эти пределы "
+"наблюдается значительное снижение производительности. Хорошим "
+"значением порога по умолчанию является 6, но для более нестабильных моделей "
+"(маленьких моделей или дообучения) может потребоваться более низкий порог."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:295
+msgid ""
+"An explicit list of the modules that we do not want to convert in 8-bit. "
+"This is useful for models such as Jukebox that has several heads in "
+"different places and not necessarily at the last position. For example for "
+"`CausalLM` models, the last `lm_head` is kept in its original `dtype`"
+msgstr ""
+"Явный список модулей, которые мы не хотим преобразовывать в 8-битный формат. "
+"Это полезно для моделей, таких как Jukebox, у которой есть несколько голов в "
+"разных местах и не обязательно в последней позиции. Например, для моделей "
+"`CausalLM` последний `lm_head` сохраняется в исходном `dtype`."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:328
+msgid "Whether to load the model in 4 bits."
+msgstr "Загружать ли модель в 4-битном формате."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:336
+msgid ""
+"To speedup computation, you can change the data type from float32 (the "
+"default value) to bfloat16"
+msgstr ""
+"Для ускорения вычислений вы можете изменить тип данных с float32 (значение "
+"по умолчанию) на bfloat16"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:351
+msgid ""
+"Quantization datatypes, `fp4` (four bit float) and `nf4` (normal four bit "
+"float), only valid when load_4bit=True"
+msgstr ""
+"Типы данных квантования `fp4` (четырёхбитный плавающий тип) и `nf4` "
+"(нормальный четырёхбитный плавающий тип) действительны только при "
+"load_4bit=True"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:360
+msgid ""
+"Nested quantization is a technique that can save additional memory at no "
+"additional performance cost. This feature performs a second quantization of "
+"the already quantized weights to save an additional 0.4 bits/parameter. "
+msgstr ""
+"Вложенное квантование - это техника, которая позволяет сэкономить "
+"дополнительную память без потери производительности. Эта функция выполняет "
+"второе квантование уже квантованных весов, чтобы сэкономить дополнительно "
+"0,4 бит на параметр."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:403
+msgid "The host IP address to bind to."
+msgstr "IP-адрес хоста, к которому нужно привязаться."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:406
+msgid "The port number to bind to."
+msgstr "Номер порта, к которому нужно привязаться."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:409
+msgid "Run the server as a daemon."
+msgstr "Запустить сервер как демон."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:414
+msgid "Logging configuration"
+msgstr "Конфигурация логирования"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/parameter.py:420
+msgid "Tracer configuration"
+msgstr "Конфигурация трассировщика"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:53
+msgid "Build Model Request"
+msgstr "Создать запрос на модель"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:56
+msgid "Build the model request from the http request body."
+msgstr "Создать запрос на модель из тела HTTP-запроса."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:59
+msgid "Default Model Name"
+msgstr "Имя модели по умолчанию"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:64
+msgid "The model name of the model request."
+msgstr "Имя модели в запросе на модель."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:67
+msgid "Temperature"
+msgstr "Температура"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:72
+msgid "The temperature of the model request."
+msgstr "Температура в запросе на модель."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:79
+msgid "Max New Tokens"
+msgstr "Максимальное количество новых токенов"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:84
+msgid "The max new tokens of the model request."
+msgstr "Максимальное количество новых токенов в запросе на модель."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:87
+msgid "Context Length"
+msgstr "Длина контекста"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:92
+msgid "The context length of the model request."
+msgstr "Длина контекста запроса модели."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:100
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:373
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:459
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:552
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:560
+msgid "The input value of the operator."
+msgstr "Входное значение оператора."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:108
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:226
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:467
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:612
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:657
+msgid "The output value of the operator."
+msgstr "Выходное значение оператора."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:201
+msgid "Merge Model Request Messages"
+msgstr "Объединить сообщения запроса модели"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:204
+msgid "Merge the model request from the input value."
+msgstr "Объединить запрос модели из входного значения."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:211
+msgid "The model request of upstream."
+msgstr "Запрос модели от предыдущего этапа."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:214
+msgid "Model messages"
+msgstr "Сообщения модели"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:217
+msgid "The model messages of upstream."
+msgstr "Сообщения модели от предыдущего этапа."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:362
+msgid "LLM Branch Operator"
+msgstr "LLM  ветвляющийся оператор"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:366
+msgid "Branch the workflow based on the stream flag of the request."
+msgstr "Разветвить рабочий процесс на основе флага потоковой передачи запроса."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:378
+msgid "Streaming Model Request"
+msgstr "Запрос на модель с потоковой передачей"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:381
+msgid "The streaming request, to streaming Operator."
+msgstr "Запрос на потоковую передачу, направленный на оператор потоковой передачи."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:384
+msgid "Non-Streaming Model Request"
+msgstr "Запрос на модель без потоковой передачи"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:387
+msgid "The non-streaming request, to non-streaming Operator."
+msgstr "Запрос без потоковой передачи, направленный на оператор без потоковой передачи."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:449
+msgid "Map Model Output to Common Response Body"
+msgstr "Преобразовать выходные данные модели в общий формат тела ответа"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:452
+msgid "Map the model output to the common response body."
+msgstr "Преобразовать выходные данные модели в общий формат тела ответа."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:464
+msgid "Common Response Body"
+msgstr "Общий формат тела ответа"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:495
+msgid "Common Streaming Output Operator"
+msgstr "Общий оператор потокового вывода"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:499
+msgid "The common streaming LLM operator, for chat flow."
+msgstr "Общий оператор потоковой передачи LLM для чат-рабочего процесса."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:503
+msgid "Upstream Model Output"
+msgstr "Выходные данные модели верхнего уровня"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:517
+msgid "The model output after transform to common stream format"
+msgstr "Выходные данные модели после преобразования в общий формат потоковой передачи"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:542
+msgid "Map String to ModelOutput"
+msgstr "Преобразовать строку в выходные данные модели"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:545
+msgid "Map String to ModelOutput."
+msgstr "Преобразовать строку в выходные данные модели."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:549
+msgid "String"
+msgstr "Строка"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:585
+msgid "LLM Branch Join Operator"
+msgstr "LLM 分支合并算子"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:589
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:634
+msgid "Just keep the first non-empty output."
+msgstr "Просто сохраняйте первый непустой вывод."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:593
+msgid "Streaming Model Output"
+msgstr "Потоковый вывод модели"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:597
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:642
+msgid "The streaming output."
+msgstr "Потоковый вывод."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:600
+msgid "Non-Streaming Model Output"
+msgstr "Не-потоковый вывод модели"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:603
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:648
+msgid "The non-streaming output."
+msgstr "Не-потоковый вывод."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:630
+msgid "String Branch Join Operator"
+msgstr "Оператор объединения строковых ветвей"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:638
+msgid "Streaming String Output"
+msgstr "Потоковый вывод строки"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:645
+msgid "Non-Streaming String Output"
+msgstr "Не-потоковый вывод строки"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/llm_operator.py:653
+msgid "String Output"
+msgstr "Вывод строки"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/message_operator.py:124
+msgid "Chat History Load Operator"
+msgstr "Оператор загрузки чат- истории"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/message_operator.py:127
+msgid "The operator to load chat history from storage."
+msgstr "Оператор для загрузки чат- истории из хранилища."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/message_operator.py:136
+msgid ""
+"The conversation storage, store the conversation items(Not include message "
+"items). If None, we will use InMemoryStorage."
+msgstr ""
+"Хранилище разговоров, которое хранит элементы разговора (не включая элементы "
+"сообщений). Если значение равно None, мы будем использовать InMemoryStorage."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/message_operator.py:147
+msgid ""
+"The message storage, store the messages of one conversation. If None, we "
+"will use InMemoryStorage."
+msgstr ""
+"Хранилище сообщений, которое хранит сообщения одного разговора. Если "
+"значение равно None, мы будем использовать InMemoryStorage."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/message_operator.py:157
+msgid "The model request."
+msgstr "Запрос модели."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/message_operator.py:162
+msgid "Stored Messages"
+msgstr "Сохраненные сообщения"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/message_operator.py:165
+msgid "The messages stored in the storage."
+msgstr "Сообщения, сохраненные в хранилище."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:37
+msgid "Common Chat Prompt Template"
+msgstr "Общий шаблон промпта для чата"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:40
+msgid "The operator to build the prompt with static prompt."
+msgstr "Оператор для создания промпта с использованием статического промпта."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:44
+msgid "System Message"
+msgstr "Системное сообщение"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:49
+msgid "The system message."
+msgstr "Системное сообщение."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:53
+msgid "Message placeholder"
+msgstr "Заглушка для сообщения"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:58
+msgid "The chat history message placeholder."
+msgstr "Заглушка для сообщений истории чата."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:61
+msgid "Human Message"
+msgstr "Сообщение пользователя"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:67
+msgid "The human message."
+msgstr "Сообщение пользователя."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:257
+msgid "Prompt Builder Operator"
+msgstr "Оператор построения промпта"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:259
+msgid "Build messages from prompt template."
+msgstr "Создать сообщения из шаблона промпта."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:263
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:350
+msgid "Chat Prompt Template"
+msgstr "Шаблон чат-промпта"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:266
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:353
+msgid "The chat prompt template."
+msgstr "Шаблон чат-промпта."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:271
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:381
+msgid "Prompt Input Dict"
+msgstr "Словарь входных промптов"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:274
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:384
+msgid "The prompt dict."
+msgstr "Словарь промптов."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:279
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:389
+msgid "Formatted Messages"
+msgstr "Отформатированные сообщения"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:283
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:393
+msgid "The formatted messages."
+msgstr "Отформатированные сообщения."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:343
+msgid "History Prompt Builder Operator"
+msgstr "Оператор построения исторических промптов"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:345
+msgid "Build messages from prompt template and chat history."
+msgstr "Создавать сообщения из шаблона промпта и чат- истории."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:361
+msgid "The key of history in prompt dict."
+msgstr "Ключ истории в словаре промптов."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:364
+msgid "String History"
+msgstr "История в виде строки"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:369
+msgid "Whether to convert the history to string."
+msgstr "Преобразовывать ли историю в строку."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:374
+msgid "History"
+msgstr "История"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/operators/prompt_operator.py:378
+msgid "The history."
+msgstr "История."
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/llm.py:137
+msgid "The media data"
+msgstr "Медиа-данные"
+
+#: ../packages/gptdb-core/src/gptdb/core/interface/llm.py:237
+msgid "The media object"
+msgstr "Медиа-объект"

@@ -16,9 +16,9 @@ from gptdb.core.operators import (
     RequestBuilderOperator,
 )
 from gptdb.datasource.operators.datasource_operator import DatasourceOperator
-from gptdb.datasource.rdbms.conn_sqlite import SQLiteTempConnector
 from gptdb.model.proxy import OpenAILLMClient
 from gptdb.rag.operators.datasource import DatasourceRetrieverOperator
+from gptdb_ext.datasource.rdbms.conn_sqlite import SQLiteTempConnector
 
 
 def _create_temporary_connection():

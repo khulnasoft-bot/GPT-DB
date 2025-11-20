@@ -50,19 +50,23 @@ Example:
 
 import asyncio
 
-from gptdb.client import Client
+from gptdb_client import Client
 
 
 async def main():
     # initialize client
     GPTDB_API_KEY = "gptdb"
     client = Client(api_key=GPTDB_API_KEY)
-    data = await client.chat(model="chatgpt_proxyllm", messages="hello")
+    try:
+        data = await client.chat(model="Qwen2.5-72B-Instruct", messages="hello")
+        print(data)
+    finally:
+        # explicitly close client to avoid event loop closed error
+        await client.aclose()
     # async for data in client.chat_stream(
     #     model="chatgpt_proxyllm",
     #     messages="hello",
     # ):
-    print(data)
 
     # res = await client.chat(model="chatgpt_proxyllm" ,messages="hello")
     # print(res)

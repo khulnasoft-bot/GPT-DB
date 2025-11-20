@@ -2,12 +2,12 @@ import asyncio
 import os
 
 from gptdb.configs.model_config import ROOT_PATH
-from gptdb.rag import ChunkParameters
-from gptdb.rag.assembler import EmbeddingAssembler
-from gptdb.rag.knowledge import KnowledgeFactory
-from gptdb.storage.full_text.elasticsearch import (
-    ElasticDocumentConfig,
+from gptdb_ext.rag import ChunkParameters
+from gptdb_ext.rag.assembler import EmbeddingAssembler
+from gptdb_ext.rag.knowledge import KnowledgeFactory
+from gptdb_ext.storage.full_text.elasticsearch import (
     ElasticDocumentStore,
+    ElasticsearchStoreConfig,
 )
 
 """Keyword rag example.
@@ -22,15 +22,14 @@ from gptdb.storage.full_text.elasticsearch import (
 
 def _create_es_connector():
     """Create es connector."""
-    config = ElasticDocumentConfig(
-        name="keyword_rag_test",
+    config = ElasticsearchStoreConfig(
         uri="localhost",
         port="9200",
         user="elastic",
         password="gptdb",
     )
 
-    return ElasticDocumentStore(config)
+    return ElasticDocumentStore(config, name="keyword_rag_test")
 
 
 async def main():
